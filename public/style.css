@@ -1,0 +1,76 @@
+.main-screen {
+    width: 1350px;
+    height: 960px;
+    top: 60px;
+    background: #FFFFFF;
+}
+
+.screen {
+    background-image: url(https://prog-8.com/images/html/advanced/top_en.png);
+    background-size: cover;
+    opacity: 0.5;
+    color: black;
+}
+
+.nama-faskes p {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 80px;
+    /* or 143% */
+    letter-spacing: -0.015em;
+    color: #000000;
+}
+
+.container {
+    padding: 60px 0 0px 0;
+    opacity: 1;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 400px;
+}
+
+.box {
+    opacity: 1;
+    float: left;
+    width: 33%;
+    position: relative;
+}
+
+.box-icon {
+    /* Rectangle */
+    width: 300px;
+    height: 400px;
+    left: 112px;
+    top: 250px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+}
+
+.box-icon p {
+    padding-bottom: 30px;
+}
+
+.spesialis-tersedia {
+    width: 1350px;
+    height: 1174px;
+    left: 0px;
+    top: 1020px;
+    background: #FFFFFF;
+}
+
+.header-laman {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 0px;
+    /* or 150% */
+    letter-spacing: -0.015em;
+}
+
+.contents {
+    margin: 40px;
+}
