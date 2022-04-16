@@ -1,3 +1,27 @@
 .logo {
     height: 50px;
 }
+
+.home_background {
+    background: url('/assets/images/home-background.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.home_white_background {
+    background-color: rgba(238, 238, 238, 0.75);
+    height: 680px;
+}
+
+.footer-dark {
+    padding: 50px 0;
+    color: #f0f9ff;
+    background-color: #282d32;
+  }
+
+
+section {
+    height: 680px;
+}
