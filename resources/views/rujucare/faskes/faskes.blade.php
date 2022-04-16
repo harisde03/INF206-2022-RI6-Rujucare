@@ -10,10 +10,10 @@
 
 @section('content')
     {{-- Working area --}}   
-    <div class ="main-screen" style="background-image: url(assets/images/contohRumahSakit.png)">
+    <div class ="main-screen" style="background-image: url(assets/images/contohRumahSakit.png)" id="main-screen">
         <div class ="container-xl">
             <div class= "header">
-                <h1>Rumah Sakit Umum Dr. Zainoel Abidin</h1>
+                <h1 id = "">Rumah Sakit Umum Dr. Zainoel Abidin</h1>
             </div>
 
             <div class="boxes" id="boxes">
@@ -29,9 +29,13 @@
                     <button type="button" class="btn btn-rujukan btn-lg ">
                         <span class="fa fa-plus"></span> Buat Rujukan
                     </button>
-                </div>
+            </div>
         </div>
-    <div class="screen-spesial">
+    </div>
+    
+    <div style="margin-top:50px;border: 0.2px solid #636161;opacity:0.5;"></div>
+
+    <div class="screen-spesial" id="screen-spesial">
         <div class="container-xl">
             <div class="header">
                 <h1>Spesialis Tersedia</h1>
@@ -60,17 +64,36 @@
                             <strong id="" name="" >Nama3 ahjahjshaksk ajgsujahijak</strong>
                             <p>Spesialis3 ajhsjsadsjh aghdkbajhgdyhgsja</p>
                         </div> 
-                    </li>
-                      
+                    </li>  
                 </ul>
-            
             </div>
-
-
         </div>
     </div>
 
+    <div style="margin-top:50px;border: 0.5px solid #636161; opacity:0.5;"></div>
 
+    <div class="screen-info" id="screen-info">
+        <div class="container-xl">
+            <div class="text-center justify-content-lg-center">
+                <h1>Informasi <span>Rumah Sakit Umum Dr. Zainoel Abidin</span></h1>
+                <p style="margin-top:20px; max-width: 900px; margin: auto; "><span>Rumah Sakit Umum Dr. Zainoel Abidin mempunyai tugas memberikan pelayanan kesehatan perorangan secara paripurna</span></p>
+            </div>
+            <div class="subinfo-kiri">
+                <blockquote style="margin-top:50px" class="quote">      
+                    <p style="margin-top:10px;"><strong>Alamat</strong></p>
+                    <p id="" href="">Jl. Tgk. Daud Beurereh No. 108 Banda Aceh</p>
+                    <p style="margin-top:50px;"><strong>Tingkat Fasilitas Kesehatan</strong></p>
+                    <p id="" href="">Rumah Sakit Umum Tingkat 2</p>
+                    <p style="margin-top:50px;"><strong>Kontak</strong></p>
+                    <p id="" href="">Email: <span>@acehprov.go.id</span> <br>Telepon: <span>0551-34565</span> </p>
+                </blockquote>
+                
+            </div>
+            <div class="subinfo-kanan">
+                <img src="{{ URL::asset('assets/images/contohRumahSakit.png') }}"  alt="gambarRumahSakit">
+            </div>
+        </div>
+    </div>
 </div>
     
    

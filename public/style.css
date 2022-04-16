@@ -2,50 +2,53 @@ li {
     list-style: none;
 }
 
+h1 {
+    opacity: 1.0;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+p {
+    opacity: 1.0;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0.015em;
+}
+
 .main-screen {
     height: 900px;
     top: -10px;
     background: #FFFFFF;
     position: relative;
     background-size: cover;
-    opacity: 0.8;
+    opacity: 0.6;
 }
 
 .header {
     width: 942px;
-    height: 144px;
+    height: 900px;
     position: absolute;
 }
 
 .header h1 {
     /* Hero H1 */
-    opacity: 1.0;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 56px;
-    line-height: 80px;
+    line-height: 50px;
     letter-spacing: -0.015em;
     color: #000;
+    padding-top: 45px;
     display: grid;
-    grid-template-columns: 50% auto;
-    padding-top: 30px;
-}
-
-.header p,
-span {
-    opacity: 1.0;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 26px;
-    line-height: 30px;
-    letter-spacing: 0.015em;
+    grid-template-columns: 40% auto;
 }
 
 .boxes {
+    padding-top: 60px;
     position: absolute;
-    top: 230px;
+    top: 150px;
     box-sizing: border-box;
 }
 
@@ -91,8 +94,8 @@ span {
 
 .screen-spesial {
     position: relative;
-    height: 1174px;
-    top: 900px;
+    height: 700px;
+    top: 10px;
     background-color: #FFFFFF;
 }
 
@@ -128,4 +131,36 @@ span {
 
 .flex-list li {
     display: auto;
+}
+
+.screen-info {
+    padding-top: 60px;
+    position: relative;
+    height: 900px;
+    background: #fff;
+}
+
+.subinfo-kiri {
+    height: 500px;
+    margin-top: 60px;
+    left: 80px;
+    float: left;
+}
+
+.subinfo-kiri p {
+    line-height: 30px;
+}
+
+.subinfo-kanan {
+    padding-top: 120px;
+    position: relative;
+    left: 5%;
+}
+
+.subinfo-kanan img {
+    height: 500px;
+    width: 550px;
+    float: right;
+    background-size: cover;
+    border: 0.5px solid #636161;
 }
