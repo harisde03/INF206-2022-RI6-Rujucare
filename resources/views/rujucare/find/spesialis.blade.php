@@ -54,7 +54,7 @@
 <br><br><br>
 
 <form class="nosubmit position-relative">
-    <input class="nosubmit position-absolute top-50 start-50 translate-middle" type="search" placeholder="Temukan Spesialis">
+    <input class="form-control nosubmit position-absolute top-50 start-50 translate-middle" type="search" placeholder="Temukan Spesialis">
 </form>
 
 <br><br><br>
