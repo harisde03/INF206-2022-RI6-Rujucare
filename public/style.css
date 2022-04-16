@@ -1,76 +1,131 @@
+li {
+    list-style: none;
+}
+
 .main-screen {
-    width: 1350px;
-    height: 960px;
-    top: 60px;
+    height: 900px;
+    top: -10px;
     background: #FFFFFF;
-}
-
-.screen {
-    background-image: url(https://prog-8.com/images/html/advanced/top_en.png);
+    position: relative;
     background-size: cover;
-    opacity: 0.5;
-    color: black;
+    opacity: 0.8;
 }
 
-.nama-faskes p {
+.header {
+    width: 942px;
+    height: 144px;
+    position: absolute;
+}
+
+.header h1 {
+    /* Hero H1 */
+    opacity: 1.0;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 56px;
     line-height: 80px;
-    /* or 143% */
     letter-spacing: -0.015em;
-    color: #000000;
+    color: #000;
+    display: grid;
+    grid-template-columns: 50% auto;
+    padding-top: 30px;
 }
 
-.container {
-    padding: 60px 0 0px 0;
-    opacity: 1;
-    width: 100%;
-    margin: 0 auto;
-    padding-bottom: 400px;
-}
-
-.box {
-    opacity: 1;
-    float: left;
-    width: 33%;
-    position: relative;
-}
-
-.box-icon {
-    /* Rectangle */
-    width: 300px;
-    height: 400px;
-    left: 112px;
-    top: 250px;
-    background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    box-sizing: border-box;
-}
-
-.box-icon p {
-    padding-bottom: 30px;
-}
-
-.spesialis-tersedia {
-    width: 1350px;
-    height: 1174px;
-    left: 0px;
-    top: 1020px;
-    background: #FFFFFF;
-}
-
-.header-laman {
+.header p,
+span {
+    opacity: 1.0;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    font-size: 48px;
-    line-height: 0px;
-    /* or 150% */
-    letter-spacing: -0.015em;
+    font-size: 26px;
+    line-height: 30px;
+    letter-spacing: 0.015em;
 }
 
-.contents {
-    margin: 40px;
+.boxes {
+    position: absolute;
+    top: 230px;
+    box-sizing: border-box;
+}
+
+.box {
+    width: 350px;
+    height: 450px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    float: left;
+    margin-right: 40px;
+}
+
+.box-img {
+    width: 300px;
+    height: 250px;
+}
+
+.btn {
+    background-color: #00ADB4;
+    opacity: 0.8;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 4px 4px rgba(32, 117, 113, 1);
+}
+
+.btn:hover {
+    opacity: 1;
+    color: #FFFFFF;
+}
+
+.btn:active {
+    position: relative;
+    top: 7px;
+    left: 10px;
+}
+
+.btn-rujukan {
+    position: absolute;
+    top: 800px;
+    left: 1130px;
+}
+
+.screen-spesial {
+    position: relative;
+    height: 1174px;
+    top: 900px;
+    background-color: #FFFFFF;
+}
+
+.box-text p {
+    padding-top: 20px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    padding-left: 64px;
+    display: grid;
+    grid-template-columns: 80% auto;
+}
+
+.box-text strong {
+    padding-top: 20px;
+    padding-left: 64px;
+    font-family: 'Montserrat';
+    font-size: 24px;
+    display: grid;
+    grid-template-columns: 80% auto;
+}
+
+.box-img {
+    width: 100%
+}
+
+.flex-list {
+    display: flex;
+}
+
+.flex-list li {
+    display: auto;
 }

@@ -9,14 +9,16 @@
     <link rel="stylesheet" href="{{ URL::asset('assets/styles/style.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    
 
     <title>@yield('title') - Rujucare</title>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img class="logo" src="{{ URL::asset('assets/images/logo.png') }}" alt="rujucare-logo"></a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+            <div class="container-fluid" >
+                <a class="navbar-brand"  href="#"><img class="logo" src="{{ URL::asset('assets/images/logo.png') }}" alt="rujucare-logo"></a>
                 @hasSection('navbar')
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
