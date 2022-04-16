@@ -53,10 +53,6 @@
 
 <br><br><br>
 
-<!-- <form class="d-flex position-relative">
-    <input class="form-control me-2 position-absolute top-50 start-50 translate-middle text-primary" type="search" placeholder="Temukan Fasilitas Kesehatan" aria-label="Search" style="width:50%; height:60px;">
-</form> -->
-
 <form class="nosubmit position-relative">
     <input class="nosubmit position-absolute top-50 start-50 translate-middle" type="search" placeholder="Temukan Fasilitas Kesehatan">
 </form>
