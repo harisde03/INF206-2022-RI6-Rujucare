@@ -18,10 +18,18 @@
 
             <div class="boxes" id="boxes">
                 <div class="box">
-                    <h1></h1>
+                    <h1 id="">10</h1>
+                    <div class="box-text">
+                         <strong>Rujukan Tersedia</strong>  
+                         <p >Jumlah rujukan tersedia untuk pasien fasilitas kesehatan</p>   
+                    </div> 
                 </div>
                 <div class="box" >
-                    <h1 id="" href="" ></h1>
+                <h1 id="">40</h1>
+                    <div class="box-text">
+                         <strong>Kamar Tersedia</strong>  
+                         <p >Jumlah kamar tersedia untuk pasien fasilitas kesehatan</p>   
+                    </div>
                 </div>
             </div>
 

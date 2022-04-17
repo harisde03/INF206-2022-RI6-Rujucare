@@ -26,7 +26,7 @@ p {
     background: #FFFFFF;
     position: relative;
     background-size: cover;
-    opacity: 0.6;
+    opacity: 0.7;
 }
 
 .header {
@@ -60,11 +60,26 @@ p {
     box-sizing: border-box;
     float: left;
     margin-right: 40px;
+    position: relative;
 }
 
 .box-img {
     width: 300px;
     height: 250px;
+}
+
+.box h1 {
+    margin: 100px 0px 40px 0px;
+    color: #00ADB5;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    line-height: 80px;
+    text-align: center;
+    font-size: 144px;
+}
+
+.box p {
+    max-width: 310px;
 }
 
 .btn {
@@ -94,9 +109,13 @@ p {
 
 .screen-spesial {
     position: relative;
-    height: 700px;
+    height: 800px;
     top: 10px;
     background-color: #FFFFFF;
+}
+
+.box-text {
+    width: 400px;
 }
 
 .box-text p {
@@ -108,8 +127,6 @@ p {
     line-height: 30px;
     letter-spacing: -0.015em;
     padding-left: 64px;
-    display: grid;
-    grid-template-columns: 80% auto;
 }
 
 .box-text strong {
