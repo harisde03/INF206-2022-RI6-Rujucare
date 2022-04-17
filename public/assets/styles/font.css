@@ -2,12 +2,12 @@
 
 h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 3.5em;
+    font-size: 3em;
 }
 
 h2 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 3em;
+    font-size: 2.5em;
 }
 
 h3 {
@@ -43,4 +43,8 @@ h1+p {
 
 footer {
     font-size: 0.75em;
+}
+
+i {
+    font-size: 1.5em;
 }
