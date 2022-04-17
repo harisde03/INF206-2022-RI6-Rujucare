@@ -1,6 +1,7 @@
 @extends('base')
 
 {{-- http://127.0.0.1:8000/faskes --}}
+{{-- Author : Muny Safitri --}}
 
 @section('title', 'Nama_Faskes')
 
@@ -40,8 +41,8 @@
             </div>
 
             <div class="buatRujukan" id="buatRujukan">
-                    <button type="button" class="btn btn-rujukan btn-lg " href="">
-                        <span class="fa fa-plus"></span> Buat Rujukan
+                    <button type="button"  >
+                        <a href="{{URL('/admin/rujuk')}}" class="btn btn-rujukan btn-lg " ><span class="fa fa-plus"></span> Buat Rujukan</a>
                     </button>
             </div>
         </div>

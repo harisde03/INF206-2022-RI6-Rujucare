@@ -185,3 +185,15 @@ p {
     border: 0.8px solid #050505;
     border-radius: 2%;
 }
+
+.editview {
+    position: relative;
+}
+
+.side-panel {
+    position: absolute;
+    width: 420px;
+    height: 1817px;
+    left: 8px;
+    top: 60px;
+}
