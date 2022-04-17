@@ -12,13 +12,16 @@
     <link rel="stylesheet" href="{{ URL::asset('assets/styles/font.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('assets/styles/style.css') }}">
 
+    {{-- Fonts --}}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
     {{-- Yield for title --}}
     <title>@yield('title') - Rujucare</title>
 </head>
 <body>
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="{{ URL('/') }}"><img class="logo" src="{{ URL::asset('assets/images/logo.png') }}" alt="rujucare-logo"></a>
+        <div class="container-md">
+            <a class="navbar-brand" href="{{ URL('/') }}"><img class="logo" src="{{ URL::asset('assets/images/logo.png') }}" alt="rujucare-logo" style="height: 36px"></a>
             @hasSection('navbar')
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -45,29 +48,27 @@
     <footer class="footer-dark">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-xxl-8 item text">
+                <div class="col-8">
                     <a class="navbar-brand" href="{{ URL('/') }}"><img class="logo" src="{{ URL::asset('assets/images/logo-dark.png') }}" alt="rujucare-logo"></a>
                 </div>
-                <div class="col-sm-6 col-md-3 col-xxl-3 item">
+                <div class="col-2">
                     <h3>Search</h3>
-                    <ul>
-                        <li><a href="#">Fasilitas Kesehatan</a></li>
-                        <li><a href="#">Dokter Spesialis</a></li>
+                    <ul class="list-unstyled">
+                        <li><a href="{{ URL('/find/faskes') }}" class="text-muted text-reset text-decoration-none">Fasilitas Kesehatan</a></li>
+                        <li><a href="{{ URL('/find/spesialis') }}" class="text-muted text-reset text-decoration-none">Dokter Spesialis</a></li>
                         <li></li>
                     </ul>
                 </div>
-                <div class="col-sm-6 col-md-3 col-xxl-1 item">
+                <div class="col-2 text-end">
                     <ul></ul><button class="btn btn-success" type="button">Login</button>
                 </div>
-                <div class="col-xxl-6 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
-                <div class="col-xxl-6 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
             </div>
             <hr>
             <div class="row">
-                <div class="col-xxl-8">
+                <div class="col-8">
                     <p class="copyright">© Rujucare, Inc. 2022</p>
                 </div>
-                <div class="col-xxl-4">
+                <div class="col-4">
                     <p>Follow us: </p>
                 </div>
             </div>

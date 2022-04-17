@@ -12,7 +12,7 @@
 
 .home_white_background {
     background-color: rgba(238, 238, 238, 0.75);
-    height: 680px;
+    height: 960px;
 }
 
 .footer-dark {
@@ -21,7 +21,6 @@
     background-color: #282d32;
   }
 
-
 section {
-    height: 680px;
+    height: 960px;
 }
