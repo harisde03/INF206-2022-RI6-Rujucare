@@ -5,7 +5,9 @@
 @section('title', 'Nama_Faskes')
 
 @section('navbar')
-
+    <li class="nav-item" > <a href="" class="nav-link">Statistik</a></li>
+    <li class="nav-item" > <a href="" class="nav-link">Informasi Spesialis</a></li>
+    <li class="nav-item" > <a href="" class="nav-link">Informasi Faskes</a></li>
 @endsection
 
 @section('content')
