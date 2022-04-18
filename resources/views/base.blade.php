@@ -37,7 +37,7 @@
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn me-2" type="submit" style="color:white">Search</button>
+                    <button class="btn btn-teal me-2" type="submit" style="color:white">Search</button>
                     <a class="btn btn-teal" href="{{ URL('/login') }}" role="button">Login</a>
                 </form>
             </div>

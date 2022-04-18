@@ -9,7 +9,7 @@
   <div class="row gx-6">
     <div class="col" style="margin-top:120px">
      <div class="p-3 border bg-light">
-         <h1>Komunitas Rumah Sakit Terbesar Se-Indonesia</h1>
+         <h1 >Komunitas Rumah Sakit Terbesar Se-Indonesia</h1>
         </div>
     </div>
     <div class="col">
