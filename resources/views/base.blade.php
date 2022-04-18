@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     {{-- Regular CSS Link --}}
-    <link rel="stylesheet" href="{{ URL::asset('assets/styles/font.css') }}">
+    <!-- <link rel="stylesheet" href="{{ URL::asset('assets/styles/font.css') }}">  -->
     <link rel="stylesheet" href="{{ URL::asset('assets/styles/style.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('assets/styles/colors.css') }}">
     <link rel="stylesheet" href="style.css">
@@ -37,7 +37,7 @@
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-teal me-2" type="submit">Search</button>
+                    <button class="btn me-2" type="submit" style="color:white">Search</button>
                     <a class="btn btn-teal" href="{{ URL('/login') }}" role="button">Login</a>
                 </form>
             </div>

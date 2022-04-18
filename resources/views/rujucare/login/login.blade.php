@@ -21,10 +21,10 @@
         <label for="floatingPassword">Password</label>
     </div>
         <div class="row">
-        <button type="button" class="btn btn-success">Login</button>
+        <button type="button" class="btn btn-success" style ="margin-top:20px;">Login</button>
     </div>
-        <div class="row">
-        <p>Belum Mendaftarkan Rumah Sakit? <a href="#">Ajukan Pendaftaran</a></p>
+        <div class="row" style ="margin-top:20px;">
+        <p>Belum Mendaftarkan Rumah Sakit? <a href="{{URL('/signup')}}">Ajukan Pendaftaran</a></p>
     </div>
     </div>
 @endsection
