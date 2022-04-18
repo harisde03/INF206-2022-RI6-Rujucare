@@ -66,7 +66,7 @@
         <th>Rujukan Tersedia</th>
     </tr>
     <tr>
-        <td>a</td>
+        <td> <a href="{{URL('/faskes')}}" >a</a></td>
         <td>d</td>
         <td>f</td>
     </tr>
