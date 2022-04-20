@@ -7,11 +7,13 @@
 @section('content')
     {{-- Working area --}}
     <div class="container-xl">
+        <br>
+        <br>
         <h2>Informasi Umum</h2>
         <hr>
         <form action="">
             <div class="row">
-                <div class="col-7">
+                <div class="col-8">
                     <div class="">
                         <h4>Nama Fasilitas Kesehatan</h4>
                         <input type="text" class="form-control" placeholder="Nama Fasilitas Kesehatan">
@@ -51,7 +53,7 @@
                     </div>
                     <a href="#" class="btn btn-teal">Lakukan Perubahan</a>
                 </div>
-                <div class="col-5">
+                <div class="col-4">
                     <div class="">
                         <h4>Foto Profil</h4>
                         <img class="rounded-circle" src="{{ URL::asset('assets\images\contohRumahSakit.png') }}" alt="foto-profil" style="height: 200px; width: 200px;">
@@ -60,5 +62,8 @@
                 </div>
             </div>
         </form>
+        <br>
+        <br>
+        <br>
     </div>
 @endsection
