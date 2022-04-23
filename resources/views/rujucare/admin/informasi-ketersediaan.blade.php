@@ -8,6 +8,9 @@
     {{-- Working area --}}
     {{-- Author : Muny Safitri --}}
     <style>
+        li{
+            list-style:none;
+        }
         *{
             font-family: 'Montserrat';
         }
@@ -136,7 +139,7 @@
         }
         
 
-        @media (max-width: 900px){
+        @media (max-width: 1400px){
 
             .main{
             position: relative;
@@ -211,13 +214,18 @@
             
             
         }
-        @media (max-width: 600px){
+        @media (max-width: 1000px){
             .main{
             position: relative;
             left:190px;
             width:auto;
             background-color: #fff;
             
+        }
+        .box-ketersediaan{
+            width:auto;
+            height: 150px;
+            position:relative;
         }
         }
             
