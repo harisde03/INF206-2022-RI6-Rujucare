@@ -12,10 +12,9 @@
     {{-- Regular CSS Link --}}
     {{-- <link rel="stylesheet" href="{{ URL::asset('assets/styles/font.css') }}"> --}}
     <link rel="stylesheet" href="{{ URL::asset('assets/styles/style.css') }}">
-    <link rel="stylesheet" href="{{ URL::asset('assets/styles/colors.css') }}">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link rel="stylesheet" href="{{ URL::asset('assets/styles/custom.css') }}">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    {{-- <link rel="stylesheet" href="style.css"> --}}
 
     {{-- Fonts --}}
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
@@ -45,7 +44,9 @@
     </nav>
 
     {{-- Yield for the actual content and sections --}}
-    @yield('content')
+    <div id="content">
+        @yield('content')
+    </div>
 
     <footer class="mt-auto footer-dark">
         <div class="container-xl">

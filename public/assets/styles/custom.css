@@ -140,3 +140,11 @@ button.bg-teal:focus {
 a.text-teal:hover, a.text-teal:focus {
     color: #007b81 !important;
 }
+
+.vh-80 {
+    height: 80vh;
+}
+
+.vh-90 {
+    height: 90vh;
+}

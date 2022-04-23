@@ -1,14 +1,13 @@
 @extends('base')
 
 {{-- http://127.0.0.1:8000/admin/informasi-profil --}}
+{{-- Author: Haris Daffa --}}
 
 @section('title', 'Informasi Profil')
 
 @section('content')
     {{-- Working area --}}
-    <div class="container-xl">
-        <br>
-        <br>
+    <div class="container-xl my-5">
         <h2>Informasi Umum</h2>
         <hr>
         <form action="">
@@ -62,8 +61,5 @@
                 </div>
             </div>
         </form>
-        <br>
-        <br>
-        <br>
     </div>
 @endsection
