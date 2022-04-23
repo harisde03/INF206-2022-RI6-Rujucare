@@ -138,6 +138,13 @@
 
         @media (max-width: 900px){
 
+            .main{
+            position: relative;
+            left:190px;
+            width:auto;
+            background-color: #fff;
+            
+        }
             .group{
             width: 400px;
             height:350px;
