@@ -160,7 +160,7 @@ p {
 }
 
 .subinfo-kiri {
-    height: 500px;
+    height: 600px;
     margin-top: 40px;
     left: 80px;
     float: left;
@@ -184,16 +184,4 @@ p {
     background-size: cover;
     border: 0.8px solid #050505;
     border-radius: 2%;
-}
-
-.editview {
-    position: relative;
-}
-
-.side-panel {
-    position: absolute;
-    width: 420px;
-    height: 1817px;
-    left: 8px;
-    top: 60px;
 }
