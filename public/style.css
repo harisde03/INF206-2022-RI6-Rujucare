@@ -185,3 +185,33 @@ p {
     border: 0.8px solid #050505;
     border-radius: 2%;
 }
+
+.sidenav {
+    height: 1817px;
+    width: 420px;
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    background-color: #fff;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav li {
+    float: left;
+    list-style: none;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #818181;
+    display: block;
+    font-weight: 600;
+    line-height: 17px;
+    font-style: normal;
+    font-family: 'Montserrat';
+    float: left;
+}
