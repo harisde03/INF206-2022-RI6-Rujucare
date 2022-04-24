@@ -43,7 +43,7 @@
             background-color: #e5e5e5;
             color:#000;
             border-radius: 10px;
-            width: :auto;
+            
             
             
         }
@@ -63,6 +63,7 @@
             opacity: 1;
             color:#fff;
             width: :auto;
+            display: block;
             
         }
         .btn-info:active {
@@ -84,7 +85,7 @@
         .sidenav {
             position: absolute;
             height:2000px;
-            width: auto;
+            width: 420px;
             
             z-index: 1;
             
@@ -193,6 +194,7 @@
             
         }
         .sidenav {
+            position: absolute;
                 width:200px;
                 height:1817px;
             }
@@ -221,7 +223,7 @@
             
         }
         
-        @media only screen and ( max-width: 1000px){
+        @media only screen and ( max-width: 800px){
             .nav-item{
                 padding-left:-10px;
             }
@@ -275,13 +277,13 @@
             <div class="sidenav  col col-auto col-md-3 col-xl-3 px-sm-2 px-0  ">
                 <div class="d-flex flex-column align-items-center align-items-sm-start ">
 
-                    <a href="/" class="d-flex  text-decoration-none">
-                        <span class="fs-4 d-none d-sm-inline" >
+                    <a href="{{URL('/faskes')}}" class="d-flex  text-decoration-none">
+                        <span class="fs-4 d-sm-inline col-4 col-md-3 col-xl-3 col-xs-4" >
                             <img src="{{ URL::asset('assets/images/contohRumahSakit.png') }}" alt="faskes" width="80px" height="80px" style="border-radius :50%;">
                         </span>
                         <div class=" pb-5 col-xl-6 " class="padding-right:10px">
-                            <div class="ms-4">
-                                <h1 class="faskes-logo  d-none d-sm-inline " style=" ">Rumah Sakit Umum Dr. Zainoel Abidin</h1>
+                            <div class="ms-5">
+                                <h1 class="faskes-logo  d-sm-inline " style=" ">Rumah Sakit Umum Dr. Zainoel Abidin</h1>
                             </div>
                             
                         </div>
@@ -304,7 +306,7 @@
                         <li class="nav-item "style="padding-top:20px;">
                             <div class="ms-3 pick"></div>
                             <button class="ms-5 btn btn-pick  " >
-                                <a href="#" class="font-black ms-5 ">
+                                <a href="{{URL('/admin/informasi-umum')}}" class="font-black ms-5 ">
                                     Informasi Profil Fakultas Kesehatan
                                 </a>
                             </button>   
@@ -321,7 +323,7 @@
                             {{-- pakai java script --}}
                             <div class="ms-3 pick"></div> 
                             <button class="ms-5 btn btn-pick  " >
-                                <a href="#" class="font-black ms-5 ">
+                                <a href="{{URL('/admin/pesan-masuk')}}" class="font-black ms-5 ">
                                    Pesan Masuk
                                 </a>
                             </button>   
@@ -330,7 +332,7 @@
                         <li class="nav-item "style="padding-top:20px;">
                             <div class="ms-3 pick"></div>
                             <button class="ms-5 btn btn-pick  " >
-                                <a href="#" class="font-black ms-5 ">
+                                <a href="{{URL('/admin/pesan=keluar')}}" class="font-black ms-5 ">
                                     Pesan Keluar
                                 </a>
                             </button>   
@@ -348,27 +350,13 @@
                             {{-- pakai java script --}}
                             <div class="ms-3 pick"></div> 
                             <button class="ms-5 btn btn-pick  " >
-                                <a href="#" class="font-black ms-5 ">
+                                <a href="{{URL('/admin/informasi-ketersediaan')}}" class="font-black ms-5 ">
                                    Simpan dan Keluar
                                 </a>
                             </button>   
                         </li>
                     </ul>
-                    {{-- <div class="dropdown pb-4">
-                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
-                            <span class="d-none d-sm-inline mx-1">loser</span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                            <li><a class="dropdown-item" href="#">New project...</a></li>
-                            <li><a class="dropdown-item" href="#">Settings</a></li>
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Sign out</a></li>
-                        </ul>
-                    </div> --}}
+                    
                 </div>
             </div>
             <div class=" flex-column main col-3 col-md-4 col-xl-4 px-sm-6 px-0 col-auto "style="margin-left:40px;">
@@ -385,16 +373,16 @@
                                      </div>
                                      <p>Jumlah rujukan akan menjadi tujuan utama bagi staff rumah sakit untuk membuat rujukan</p>
                                  </div>
-                                 <div class="box-ketersediaan  col-auto py-lg-5">
+                                 <div class="box-ketersediaan  col-auto mb-5">
                                      <h2><label for="group-2"></label>Jumlah Kamar Tersedia</h2>
                                      <div class="number-input">
                                          <input class="quantity col-sm-12 form-control" min="0" id="group-2" name="group-2"   value="1" type="number" required>
                                      </div>
                                      <p>Jumlah kamar akan menjadi tujuan utama bagi staff rumah sakit untuk membuat rujukan</p>
                                  </div>
-                                 <div></div>
+                                  <button class="btn-sm btn-info col-5 ">Lakukan Perubahan</button>
                              </div>
-                             <button class="btn-sm btn-info col-5">Lakukan Perubahan</button>
+                            
                              
                          </li>
                          <br>
@@ -404,7 +392,7 @@
                                  <form action="" method="post" enctype="multipart/form-data">
                                      
                                      {{-- <input class="align-bottom "  type='file' name='foto' accept='image/*' value="{{ URL::asset('assets/images/dokter1.png') }}" disabled style="float:right;position: absolute;" /> --}}
-                                     <img class="sp-img col-6 img-thumbnail float-right" src="{{ URL::asset('assets/images/dokter1.png') }}" alt="" style="align-self: end">    
+                                     <img class="sp-img col-3 img-thumbnail float-right" src="{{ URL::asset('assets/images/dokter1.png') }}" alt="" style="align-self: end">    
                                  </form>
                                  
                                  <div class="group   col-auto ">
