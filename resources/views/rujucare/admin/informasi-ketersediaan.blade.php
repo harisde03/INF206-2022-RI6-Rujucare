@@ -7,6 +7,7 @@
 @section('content')
     {{-- Working area --}}
     {{-- Author : Muny Safitri --}}
+    <link rel="stylesheet" href="style.css">
     <style>
         .sub-img{
             border-radius: 80%;

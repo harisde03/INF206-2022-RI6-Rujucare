@@ -22,12 +22,13 @@ p {
 }
 
 .main-screen {
-    height: 720px;
+    height: 570px;
     top: 0px;
     background: #FFFFFF;
     position: relative;
     background-size: cover;
     opacity: 0.7;
+    padding-bottom: 40px;
 }
 
 .header {
@@ -63,6 +64,7 @@ p {
     float: left;
     margin-right: 30px;
     position: relative;
+    margin-top: 20px;
 }
 
 .box-img {
@@ -88,40 +90,38 @@ p {
     background-color: #00ADB4;
     opacity: 0.8;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 4px 6px rgba(32, 117, 113, 1);
+    float: right;
 }
 
 .btn:hover {
+    background-color: #00ADB4;
     opacity: 1;
-    color: #FFFFFF;
 }
 
 .btn:active {
     opacity: 0.7;
-    top: 700px;
-    left: 1130px;
+    background-color: rgba(32, 117, 113, 1);
 }
 
 .btn-rujukan {
-    position: absolute;
-    top: 695px;
-    left: 1125px;
+    position: relative;
 }
 
 .screen-spesial {
     position: relative;
-    height: 700px;
-    top: 0px;
+    height: 800px;
+    top: 30px;
     background-color: #FFFFFF;
 }
 
 .box-text {
-    width: 350px;
+    width: 250px;
 }
 
 .box-text p {
-    padding-top: 20px;
+    padding-top: 10px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
@@ -132,7 +132,7 @@ p {
 }
 
 .box-text strong {
-    padding-top: 30px;
+    padding-top: 20px;
     padding-left: 64px;
     font-family: 'Montserrat';
     font-size: 24px;
@@ -149,11 +149,11 @@ p {
 }
 
 .flex-list li {
-    display: auto;
+    flex: wrap;
 }
 
 .screen-info {
-    padding-top: 60px;
+    padding-top: 30px;
     position: relative;
     height: 900px;
     background: #fff;
@@ -161,7 +161,7 @@ p {
 
 .subinfo-kiri {
     height: 600px;
-    margin-top: 40px;
+    margin-top: 10px;
     left: 80px;
     float: left;
     width: 320px;
@@ -214,4 +214,105 @@ p {
     font-style: normal;
     font-family: 'Montserrat';
     float: left;
+}
+
+#frame-image {
+    overflow: hidden;
+    position: relative;
+}
+
+#frame-image img {
+    max-height: 320px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    background-size: cover;
+}
+
+@media (max-width: 900px) {
+    .boxes {
+        padding-top: 40px;
+        position: absolute;
+        top: 150px;
+        box-sizing: border-box;
+        height: 0px;
+    }
+    .box {
+        width: 250px;
+        height: 350px;
+        background: #FFFFFF;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        box-sizing: border-box;
+        float: left;
+        margin-right: 20px;
+        position: relative;
+    }
+    .box-img {
+        width: 300px;
+        height: 250px;
+    }
+    .box h1 {
+        margin: 100px 0px 40px 0px;
+        color: #00ADB5;
+        font-weight: 700;
+        letter-spacing: -0.015em;
+        line-height: 60px;
+        text-align: center;
+        font-size: 100px;
+    }
+    .box p {
+        max-width: 210px;
+    }
+    .screen-spesial {
+        position: relative;
+        height: 1400px;
+        top: 80px;
+        background-color: #FFFFFF;
+    }
+    .box-text {
+        width: 350px;
+    }
+    .box-text p {
+        padding-top: 5px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 20px;
+        letter-spacing: -0.015em;
+        padding-left: 34px;
+    }
+    .box-text strong {
+        padding-top: 0px;
+        padding-left: 34px;
+        font-family: 'Montserrat';
+        font-size: 14px;
+        display: grid;
+        grid-template-columns: 80% auto;
+    }
+    .box-img {
+        width: 50%;
+    }
+    .subinfo-kanan img {
+        height: 400px;
+        width: 400px;
+        float: right;
+        background-size: cover;
+        border: 0.8px solid #050505;
+        border-radius: 2%;
+    }
+}
+
+@media (max-width: 700px) {
+    .subinfo-kanan img {
+        height: 300px;
+        width: 300px;
+        float: left;
+        background-size: cover;
+        border: 0.8px solid #050505;
+        border-radius: 2%;
+    }
+    .main-screen {
+        height: 870px;
+    }
 }
