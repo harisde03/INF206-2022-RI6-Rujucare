@@ -176,6 +176,11 @@ p {
     width: 320px;
 }
 
+.min-vh-90{
+    min-height: 90vh;
+}
+
+
 .subinfo-kiri p {
     line-height: 30px;
 }
