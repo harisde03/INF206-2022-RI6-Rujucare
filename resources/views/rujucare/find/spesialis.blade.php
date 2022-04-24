@@ -1,6 +1,7 @@
 @extends('base')
 
 {{-- http://127.0.0.1:8000/find/spesialis --}}
+{{-- Author: Ahmad Chairiansyah --}}
 
 @section('title', 'Pencarian Spesialis')
 
