@@ -1,4 +1,6 @@
+<br>
 <p align="center"><img src="https://raw.githubusercontent.com/harisde03/INF206-2022-RI6-Rujucare/main/public/assets/images/rujucare-logo.svg" alt="Rujucare Logo" width="300"></p>
+<br>
 
 ## About Rujucare
 Rujucare adalah aplikasi berbasis website yang dapat membantu fasilitas kesehatan dalam membuat rujukan dengan cepat. Rujucare menyediakan fasilitas pencarian informasi fasilitas kesehatan dan dokter spesialis. Rujucare juga memiliki fitur menampilkan informasi mengenai ketersediaan rujukan dan kamar yang tersedia di fasilitas kesehatan. Pengajuan rujukan dilakukan secara otomatis berdasarkan tingkatan fasilitas kesehatannya, dengan tujuan dapat membantu mengurangi penumpukan dan antrian panjang yang sering terjadi di sebagian besar rumah sakit umum.
@@ -15,7 +17,7 @@ Rujucare adalah aplikasi berbasis website yang dapat membantu fasilitas kesehata
 - Maghfirah ZA (2008107010075)  
 👩‍💻 Frontend Engineer
 
-%%## Documentation%%
+<!-- ## Documentation -->
 
 ## Requirements
 1. XAMPP with PHP Version ^8.0.2
@@ -66,6 +68,6 @@ $ php artisan serve
 
 ## Resources
 ### Fonts:
-https://github.com/FortAwesome/Font-Awesome
-https://fonts.google.com/specimen/Montserrat
-https://fonts.google.com/specimen/Comfortaa
+https://github.com/FortAwesome/Font-Awesome  
+https://fonts.google.com/specimen/Montserrat  
+https://fonts.google.com/specimen/Comfortaa  
