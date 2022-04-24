@@ -214,8 +214,8 @@
         }
         
         @media only screen and ( max-width: 600px){
-            .sidenav{
-                
+            .nav-item{
+                padding-left:-10px;
             }
             
             .main{
@@ -229,10 +229,10 @@
            position: absolute;
         }
         .sp{
-            height: 00px;
+            height: 700px;
         }
         .box-ketersediaan{
-            width:auto;
+            width:250px;
             
             position:relative;
         }
@@ -252,7 +252,7 @@
 
     <div class="container-xl col-3 col-auto  ">
         <div class="row  " style="margin-left:-90px">
-            <div class="sidenav  col col-auto col-md-5 col-xl-3 px-sm-2 px-0  ">
+            <div class="sidenav  col col-auto col-md-3 col-xl-3 px-sm-2 px-0  ">
                 <div class="d-flex flex-column align-items-center align-items-sm-start ">
 
                     <a href="/" class="d-flex  text-decoration-none">
@@ -351,12 +351,12 @@
                     </div> --}}
                 </div>
             </div>
-            <div class=" main col-3 col-md-4 col-xl-4 px-sm-6 px-0 col-auto  "style="margin-left:40px;">
+            <div class=" flex-column main col-3 col-md-4 col-xl-4 px-sm-6 px-0 col-auto "style="margin-left:40px;">
                 <div class=" ">
-                    <ul>
+                    <ul  class=" main col-3 col-md-4 col-xl-4 px-sm-6 px-0 col-auto ">
                         <li>
                              <h1>Informasi Ketersediaan</h1>
-                             <div class="group">
+                             <div class="group col-2">
                                  <div class="box-ketersediaan">
                                      <h2><label for="group-1">Jumlah Rujukan Tersedia</label></h2>
                                      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
@@ -378,7 +378,7 @@
                              
                          </li>
                          <li>
-                             <div class="sp ">
+                             <div class="sp col-9 bg-danger ">
                                  {{-- belum tau cara input gambar model bulat kek tu --}}
                                  <form action="" method="post" enctype="multipart/form-data">
                                      
@@ -407,7 +407,7 @@
                              </div>
                          </li>
                          <li>
-                             <div class="sp">
+                             <div class="sp col-12">
                                  <form action="" method="post" enctype="multipart/form-data">
                                      
                                      {{-- <input class="align-bottom "  type='file' name='foto' accept='image/*' value="{{ URL::asset('assets/images/dokter1.png') }}" disabled style="float:right;position: absolute;" /> --}}
@@ -433,7 +433,7 @@
                              </div>  
                          </li>
                          <li>
-                             <div class="sp ">
+                             <div class="sp col-12">
                                  <form action="" method="post" enctype="multipart/form-data">
                                     
                                      {{-- <input class="align-bottom "  type='file' name='foto' accept='image/*' value="{{ URL::asset('assets/images/dokter1.png') }}" disabled style="float:right;position: absolute;" /> --}}
