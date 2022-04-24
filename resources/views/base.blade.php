@@ -13,6 +13,8 @@
     {{-- <link rel="stylesheet" href="{{ URL::asset('assets/styles/font.css') }}"> --}}
     <link rel="stylesheet" href="{{ URL::asset('assets/styles/style.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('assets/styles/custom.css') }}">
+    {{-- <link rel="stylesheet" href="style.css"> --}}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     {{-- <link rel="stylesheet" href="style.css"> --}}
 
