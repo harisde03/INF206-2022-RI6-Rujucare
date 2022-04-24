@@ -7,6 +7,13 @@
 @section('content')
     {{-- Working area --}}
     {{-- Author : Muny Safitri --}}
+    <style>
+        .sub-img{
+            border-radius: 80%;
+            width: 200px;
+            height:200px;
+        }
+    </style>
        
 
     <div class="container-xl mb-5">
@@ -103,7 +110,7 @@
                             </div>
                             <div class="col-4">
                                 <form action="" method="post" enctype="multipart/form-data">
-                                    <img class="sp-img col-6 img-thumbnail float-right"
+                                    <img class="sub-img img-thumbnail float-right "
                                         src="{{ URL::asset('assets/images/dokter1.png') }}" alt=""
                                         style="align-self: end">
                                 </form>
@@ -135,7 +142,7 @@
                             </div>
                             <div class="col-5">
                                 <form action="" method="post" enctype="multipart/form-data">
-                                    <img class="sp-img img-thumbnail " src="{{ URL::asset('assets/images/dokter2.png') }}"
+                                    <img class="sub-img img-thumbnail" src="{{ URL::asset('assets/images/dokter2.png') }}"
                                         alt="" style="align-self: end">
                                 </form>
                             </div>
@@ -166,7 +173,7 @@
                             </div>
                             <div class="col-4">
                                 <form action="" method="post" enctype="multipart/form-data">
-                                    <img class="sp-img img-thumbnail " src="{{ URL::asset('assets/images/dokter3.png') }}"
+                                    <img class="sub-img img-thumbnail " src="{{ URL::asset('assets/images/dokter3.png') }}"
                                         alt="" style="align-self: end">
                                 </form>
                             </div>
