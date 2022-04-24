@@ -7,481 +7,186 @@
 @section('content')
     {{-- Working area --}}
     {{-- Author : Muny Safitri --}}
-    <style>
-        li{
-            list-style:none;
-        }
-        *{
-            font-family: 'Montserrat';
-        }
-        a{
-            text-decoration:none;
-        }
-        a:hover{
-            
-            color:#000;
-        }
-        .font-black{
-            color:#000;
-        }
-        .faskes-logo{
-            color: #00ADB5;font-size: 18px;font-weight: 700; line-height: 22px;
-        }
-        .btn{
-            opacity:0.7;
-            width: :350px;
-            height:38px;
-            color:#000;
-            
+       
 
-            
-        }
-        .btn-pick:hover {
-            font-weight:600;
-            font-style: normal;
-            opacity: 1;
-            background-color: #e5e5e5;
-            color:#000;
-            border-radius: 10px;
-            
-            
-            
-        }
-        .btn:active {
-            opacity: 0.7;
-            color:#000;
-        }
-        .btn-info{
-            opacity:0.8;
-            color:#fff;
-            text-align:center; 
-            border-radius: 5px;
-        }
-        .btn-info:hover {
-            font-weight:400;
-            font-style: normal;
-            opacity: 1;
-            color:#fff;
-            width: :auto;
-            display: block;
-            
-        }
-        .btn-info:active {
-            opacity: 0.9;
-           
-        }
-        .nav{
-            font-family: 'Montserrat'; font-size: 14px;font-weight: 600;line-height: 17px;
-        }
-        .pick{
-            background:#00adb4;
-            border-radius:5px;
-            width:10px;
-            height:38px;
-            position: absolute;
-            padding-left: 10px;
-            padding-top:-10px;
-        }
-        .sidenav {
-            position: absolute;
-            height:2000px;
-            width: 420px;
-            
-            z-index: 1;
-            
-            left: 0px;
-            background-color: #fff;
-            overflow-x: hidden;
-            padding-top: 20px;
-            
-        }
-        .main{
-            position: relative;
-            margin=left:20px;
-            width:auto;
-            background-color: #fff;
-            height:2000px;
-            
-        }
-        .header{
-            margin-left:50px;
-        }
-        .sp{
-            width:850px;
-            height:350px;
-        }
-        .group{
-            width: 450px;
-            height:350px;
-
-        }
-        .group h2{
-            padding-top:20px;
-            font-weight:700px;
-            font-size:24px;
-            line-height: 36px;
-        }
-        .group p{
-            font-weight: 400px;
-            font-size:18px;
-            line-height:22px;
-            margin-top: 5px;
-        }
-        .box-ketersediaan{
-            width:auto;
-            height: 140px;
-            position:relative;
-            padding-bottom: :20px;
-        }
-        .sp-img{
-            position: relative;
-            float: right;
-            border-radius :50%;
-            width:300px;
-            height:300px;
-            margin-bottom: :20px;
-        }
-        
-
-        @media only screen and (max-width: 1200px){
-
-            .main{
-            position: relative;
-            left:px;
-            width:auto;
-            background-color: #fff;
-            
-        }
-            .group{
-            width: 400px;
-            height:380px;
-            padding-bottom: :20px;
-            
-
-        }
-        .group h2{
-            padding-top:20px;
-            font-weight:700px;
-            font-size:24px;
-            line-height: 36px;
-        }
-        .group p{
-            font-weight: 400px;
-            font-size:18px;
-            line-height:22px;
-            margin-top: 5px;
-            
-            top:20px;
-        }
-        .box-ketersediaan{
-            width:300px;
-            height: 160px;
-            position:relative;
-            padding-top:10px;
-            padding-bottom:30px;
-        } 
-        .sp{
-            width:540px;
-            padding-top: 20px;
-            height:500px;
-        }
-        
-
-        .sp-img{
-            position:  relative];
-            width:200px;
-            height:200px;
-            
-        }
-        .sidenav {
-            position: absolute;
-                width:200px;
-                height:1817px;
-            }
-            .btn-pick:hover {
-            font-weight:600;
-            font-style: normal;
-            opacity: 1;
-            background-color: #e5e5e5;
-            color:#000;
-            border-radius: 10px;
-            width: :auto;
-            height:120px;
-            }
-            .pick{
-                background:#00adb4;
-                border-radius:5px;
-                width:5px;
-                height:70px;
-                position: absolute;
-                padding-left: 10px;
-                padding-bottom:10px;
-            }
-          
-           
-            
-            
-        }
-        
-        @media only screen and ( max-width: 800px){
-            .nav-item{
-                padding-left:-10px;
-            }
-            
-            .main{
-            position: relative;
-            left:50px;
-            width:auto;
-            background-color: #fff;
-            
-        }
-        .sp-img{
-           position: relative;
-           width: 100px;
-           height: 100px;
-           float: left;
-           
-        }
-        .sp{
-            position: relative;
-            height: 600px;
-            width: 200px;
-           
-        }
-        .box-ketersediaan{
-           
-            width:250px;
-            top:0px;
-            height: 180px;
-            position:relative;
-        }
-        .box-ketersediaan h2{
-            padding-top:65px;
-        }
-        
-    
-        .group{
-            height: 450px;
-           
-            
-        }
-        
-        }
-            
-        
-
-    </style>
-
-    <div class="container-xl col-3 col-auto  ">
-        <div class="row  " style="margin-left:-90px">
-            <div class="sidenav  col col-auto col-md-3 col-xl-3 px-sm-2 px-0  ">
-                <div class="d-flex flex-column align-items-center align-items-sm-start ">
-
-                    <a href="{{URL('/faskes')}}" class="d-flex  text-decoration-none">
-                        <span class="fs-4 d-sm-inline col-4 col-md-3 col-xl-3 col-xs-4" >
-                            <img src="{{ URL::asset('assets/images/contohRumahSakit.png') }}" alt="faskes" width="80px" height="80px" style="border-radius :50%;">
-                        </span>
-                        <div class=" pb-5 col-xl-6 " class="padding-right:10px">
-                            <div class="ms-5">
-                                <h1 class="faskes-logo  d-sm-inline " style=" ">Rumah Sakit Umum Dr. Zainoel Abidin</h1>
-                            </div>
-                            
-                        </div>
-                        
-                    </a>
-
-                
-                    <ul class="fs-4 nav flex-column align-items-center align-items-sm-start " id="menu" >
-                        <li class="nav-item "style="padding-top:20px;">
-                            {{-- pakai java script --}}
-                            <div class="ms-3 pick"></div> 
-                            <button class="ms-5 btn btn-pick  " >
-                                <a href="#" class="font-black ms-5 ">
-                                   
-                                    Informasi Ketersediaan
-                                </a>
-                            </button>   
-                        </li>
-                        
-                        <li class="nav-item "style="padding-top:20px;">
-                            <div class="ms-3 pick"></div>
-                            <button class="ms-5 btn btn-pick  " >
-                                <a href="{{URL('/admin/informasi-umum')}}" class="font-black ms-5 ">
-                                    Informasi Profil Fakultas Kesehatan
-                                </a>
-                            </button>   
-                        </li>
-                        <br>
-                        <hr>
-                    </ul>
-                        
-                    
-                    <div class="fs-4 ms-4 col-12 " style=" border: 1px solid #C4C4C4;position: relative"></div>
-                    <br>
-                    <ul class="fs-4 nav flex-column align-items-center align-items-sm-start " id="menu" >
-                        <li class="nav-item "style="padding-top:20px;">
-                            {{-- pakai java script --}}
-                            <div class="ms-3 pick"></div> 
-                            <button class="ms-5 btn btn-pick  " >
-                                <a href="{{URL('/admin/pesan-masuk')}}" class="font-black ms-5 ">
-                                   Pesan Masuk
-                                </a>
-                            </button>   
-                        </li>
-                        
-                        <li class="nav-item "style="padding-top:20px;">
-                            <div class="ms-3 pick"></div>
-                            <button class="ms-5 btn btn-pick  " >
-                                <a href="{{URL('/admin/pesan=keluar')}}" class="font-black ms-5 ">
-                                    Pesan Keluar
-                                </a>
-                            </button>   
-                        </li>
-                    <br>
-                    <hr>
-                    </ul>
-
-                    
-                    <div class="fs-4 ms-4 col-12" style=" border: 1px solid #C4C4C4;position: relative"></div>
-                
-                    
-                    <ul class="fs-4 nav flex-column align-items-center align-items-sm-start " id="menu" >
-                        <li class="nav-item "style="padding-top:20px;">
-                            {{-- pakai java script --}}
-                            <div class="ms-3 pick"></div> 
-                            <button class="ms-5 btn btn-pick  " >
-                                <a href="{{URL('/admin/informasi-ketersediaan')}}" class="font-black ms-5 ">
-                                   Simpan dan Keluar
-                                </a>
-                            </button>   
-                        </li>
-                    </ul>
-                    
+    <div class="container-xl mb-5">
+        <div class="col">
+            <div class="row my-4">
+                <div class="d-flex" style="width: 280px;">
+                    <img class="rounded-circle" src="{{ URL::asset('assets\images\contohRumahSakit.png') }}"
+                        alt="foto-profil" style="height: 64px; width: 64px;">
+                    <div class="align-self-center ps-3 text-teal text-nowrap">
+                        <h5 class="mb-0">Rumah Sakit Umum Dr. Zainoel Abidin</h5>
+                        <h5 class="mb-0 fw-normal">Informasi Umum</h5>
+                    </div>
                 </div>
             </div>
-            <div class=" flex-column main col-3 col-md-4 col-xl-4 px-sm-6 px-0 col-auto "style="margin-left:40px;">
-                <div class=" ">
-                    <ul  class=" main col-3 col-md-4 col-xl-4 px-sm-6 px-0 col-auto ">
+            <div class="row">
+                <div class="mt-2 d-flex flex-column flex-shrink-0" style="width: 280px;">
+                    <ul class="nav nav-pills flex-column mb-auto">
+                        <li class="nav-item">
+                            <a href="{{ URL('/admin/informasi-ketersediaan') }}" class="nav-link active" aria-current="page">
+                                Informasi Ketersediaan
+                            </a>
+                        </li>
                         <li>
-                             <h1>Informasi Ketersediaan</h1>
-                             <div class="group col-auto mb-lg-4">
-                                 <div class="box-ketersediaan">
-                                     <h2><label for="group-1">Jumlah Rujukan Tersedia</label></h2>
-                                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-                                     <div class="number-input">
-                                         <input class="quantity col-sm-12 form-control" min="0" id="group-1" name="group-1"   value="1" type="number" required>
-                                     </div>
-                                     <p>Jumlah rujukan akan menjadi tujuan utama bagi staff rumah sakit untuk membuat rujukan</p>
-                                 </div>
-                                 <div class="box-ketersediaan  col-auto mb-5">
-                                     <h2><label for="group-2"></label>Jumlah Kamar Tersedia</h2>
-                                     <div class="number-input">
-                                         <input class="quantity col-sm-12 form-control" min="0" id="group-2" name="group-2"   value="1" type="number" required>
-                                     </div>
-                                     <p>Jumlah kamar akan menjadi tujuan utama bagi staff rumah sakit untuk membuat rujukan</p>
-                                 </div>
-                                  <button class="btn-sm btn-info col-5 ">Lakukan Perubahan</button>
-                             </div>
-                            
-                             
-                         </li>
-                         <br>
-                         <li>
-                             <div class="sp col-9 col-auto  ">
-                                 {{-- belum tau cara input gambar model bulat kek tu --}}
-                                 <form action="" method="post" enctype="multipart/form-data">
-                                     
-                                     {{-- <input class="align-bottom "  type='file' name='foto' accept='image/*' value="{{ URL::asset('assets/images/dokter1.png') }}" disabled style="float:right;position: absolute;" /> --}}
-                                     <img class="sp-img col-3 img-thumbnail float-right" src="{{ URL::asset('assets/images/dokter1.png') }}" alt="" style="align-self: end">    
-                                 </form>
-                                 
-                                 <div class="group   col-auto ">
-                                     
-                                     <div class="box-ketersediaan col-auto">
-                                         <h2><label for="group-3">Nama Spesialis</label></h2>
-                                         <div class="input">
-                                             <input class=" col-sm-12 form-control"  id="group-1" name="group-3"   value="" type="text" required>
-                                         </div>
-                                         <p>Nama fasilitas akan ditampilkan pada halaman utama rumah sakit dan akan ditampilkan pada menu pencarian</p>
-                                     </div>
-                                     <div class="box-ketersediaan col-auto ">
-                                         <h2><label for="group-4"></label>Kemampuan Spesialis</h2>
-                                         <div class="input">
-                                             <input class="col-sm-12 form-control"  id="group-2" name="group-2"   value="" type="text" required>
-                                         </div>
-                                         <p>Email akan ditampilkan sebagai tempat menghubungi fasilitas kesehatan</p>
-                                     </div>
-                                 </div>
-                                 
-                                 <button class="btn-sm btn-info col-5 ">Lakukan Perubahan</button>
-                             </div>
-                         </li>
-                         <br>
-                         <li>
-                             <div class="sp col-12">
-                                 <form action="" method="post" enctype="multipart/form-data">
-                                     
-                                     {{-- <input class="align-bottom "  type='file' name='foto' accept='image/*' value="{{ URL::asset('assets/images/dokter1.png') }}" disabled style="float:right;position: absolute;" /> --}}
-                                     <img class="sp-img img-thumbnail " src="{{ URL::asset('assets/images/dokter2.png') }}" alt="" style="align-self: end">    
-                                 </form>
-                                 <div class="group  col-auto">
-                                     <div class="box-ketersediaan ">
-                                         <h2><label for="group-3">Nama Spesialis</label></h2>
-                                         <div class="input">
-                                             <input class=" col-sm-12 form-control"  id="group-3" name="group-3"   value="" type="text" required>
-                                         </div>
-                                         <p>Nama fasilitas akan ditampilkan pada halaman utama rumah sakit dan akan ditampilkan pada menu pencarian</p>
-                                     </div>
-                                     <div class="box-ketersediaan">
-                                         <h2><label for="group-4"></label>Kemampuan Spesialis</h2>
-                                         <div class="input">
-                                             <input class="col-sm-12 form-control"  id="group-2" name="group-2"   value="" type="text" required>
-                                         </div>
-                                         <p>Email akan ditampilkan sebagai tempat menghubungi fasilitas kesehatan</p>
-                                     </div>
-                                 </div>
-                                 <button class="btn-sm btn-info col-5">Lakukan Perubahan</button>
-                             </div>  
-                         </li>
-                         <br>
-                         <li>
-                             <div class="sp col-12">
-                                 <form action="" method="post" enctype="multipart/form-data">
-                                    
-                                     {{-- <input class="align-bottom "  type='file' name='foto' accept='image/*' value="{{ URL::asset('assets/images/dokter1.png') }}" disabled style="float:right;position: absolute;" /> --}}
-                                     <img class="sp-img img-thumbnail " src="{{ URL::asset('assets/images/dokter3.png') }}" alt="" style="align-self: end">    
-                                 </form>
-                                 <div class="group">
-                                     <div class="box-ketersediaan">
-                                         <h2><label for="group-3">Nama Spesialis</label></h2>
-                                         <div class="input">
-                                             <input class=" col-sm-12 form-control"  id="group-3" name="group-3"   value="" type="text" required>
-                                         </div>
-                                         <p>Nama fasilitas akan ditampilkan pada halaman utama rumah sakit dan akan ditampilkan pada menu pencarian</p>
-                                     </div>
-                                     <div class="box-ketersediaan">
-                                         <h2><label for="group-4"></label>Kemampuan Spesialis</h2>
-                                         <div class="input">
-                                             <input class="col-sm-12 form-control"  id="group-4" name="group-4"   value="" type="text" required>
-                                         </div>
-                                         <p>Email akan ditampilkan sebagai tempat menghubungi fasilitas kesehatan</p>
-                                     </div>  
-                                 </div>
-                                 <button class="btn-sm btn-info col-5 ">Lakukan Perubahan</button>  
-                                 <button class="btn-sm btn-info col-5 ">Tambah Spesialis</button>
-                             </div>
-                         </li>
-                         <br>
-                     </ul>
-     
-                    
+                            <a href="{{ URL('/admin/informasi-profil') }}" class="nav-link link-dark">
+                                Informasi Profil Umum
+                            </a>
+                        </li>
+                        <hr>
+                        <li>
+                            <a href="{{ URL('/admin/pesan-masuk') }}" class="nav-link link-dark">
+                                Pesan Masuk
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ URL('/admin/pesan-keluar') }}" class="nav-link link-dark">
+                                Pesan Keluar
+                            </a>
+                        </li>
+                        <hr>
+                        <li>
+                            <a href="{{ URL('/faskes') }}" class="nav-link link-dark">
+                                Simpan dan Keluar
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-             </div>
+
+                <div class="col-8">
+                    <h2>Informasi Ketersediaan</h2>
+                    <hr>
+                    <form action="">
+                        <div class="row">
+                            <div class="col-8">
+                                <h3><label for="group-1">Jumlah Rujukan Tersedia</label></h3>
+                                <link rel="stylesheet"
+                                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+                                <div class="number-input">
+                                    <input class="quantity col-sm-12 form-control" min="0" id="group-1" name="group-1"
+                                        value="1" type="number" required>
+                                </div>
+                                <p>Jumlah rujukan akan menjadi tujuan utama bagi staff rumah sakit untuk membuat rujukan</p>
+                            </div>
+                            <div class="col-8">
+                                <h3><label for="group-2"></label>Jumlah Kamar Tersedia</h3>
+                                <div class="number-input">
+                                    <input class="quantity col-sm-12 form-control" min="0" id="group-2" name="group-2"
+                                        value="1" type="number" required>
+                                </div>
+                                <p>Jumlah kamar akan menjadi tujuan utama bagi staff rumah sakit untuk membuat rujukan</p>
+                            </div>
+                            <div></div>
+                        </div>
+                        <div class="col"><button class="btn btn-info">Lakukan Perubahan</button></div>
+                        <br>
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="box-ketersediaan col-auto">
+                                    <h3><label for="group-3">Nama Spesialis</label></h3>
+                                    <div class="input">
+                                        <input class=" col-sm-12 form-control" id="group-1" name="group-3" value=""
+                                            type="text" required>
+                                    </div>
+                                    <p>Nama fasilitas akan ditampilkan pada halaman utama rumah sakit dan akan ditampilkan
+                                        pada menu pencarian</p>
+                                </div>
+                                <div class="box-ketersediaan col-auto ">
+                                    <h3><label for="group-4"></label>Kemampuan Spesialis</h3>
+                                    <div class="input">
+                                        <input class="col-sm-12 form-control" id="group-2" name="group-2" value=""
+                                            type="text" required>
+                                    </div>
+                                    <p>Email akan ditampilkan sebagai tempat menghubungi fasilitas kesehatan</p>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <form action="" method="post" enctype="multipart/form-data">
+                                    <img class="sp-img col-6 img-thumbnail float-right"
+                                        src="{{ URL::asset('assets/images/dokter1.png') }}" alt=""
+                                        style="align-self: end">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-info">Lakukan Perubahan</button>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col">
+                                <div class="box-ketersediaan col-auto">
+                                    <h3><label for="group-3">Nama Spesialis</label></h3>
+                                    <div class="input">
+                                        <input class=" col-sm-12 form-control" id="group-1" name="group-3" value=""
+                                            type="text" required>
+                                    </div>
+                                    <p>Nama fasilitas akan ditampilkan pada halaman utama rumah sakit dan akan ditampilkan
+                                        pada menu pencarian</p>
+                                </div>
+                                <div class="box-ketersediaan col-auto ">
+                                    <h3><label for="group-4"></label>Kemampuan Spesialis</h3>
+                                    <div class="input">
+                                        <input class="col-sm-12 form-control" id="group-2" name="group-2" value=""
+                                            type="text" required>
+                                    </div>
+                                    <p>Email akan ditampilkan sebagai tempat menghubungi fasilitas kesehatan</p>
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <form action="" method="post" enctype="multipart/form-data">
+                                    <img class="sp-img img-thumbnail " src="{{ URL::asset('assets/images/dokter2.png') }}"
+                                        alt="" style="align-self: end">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-sm btn-info">Lakukan Perubahan</button>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="box-ketersediaan col-auto">
+                                    <h3><label for="group-3">Nama Spesialis</label></h3>
+                                    <div class="input">
+                                        <input class=" col-sm-12 form-control" id="group-1" name="group-3" value=""
+                                            type="text" required>
+                                    </div>
+                                    <p>Nama fasilitas akan ditampilkan pada halaman utama rumah sakit dan akan ditampilkan
+                                        pada menu pencarian</p>
+                                </div>
+                                <div class="box-ketersediaan col-auto ">
+                                    <h3><label for="group-4"></label>Kemampuan Spesialis</h3>
+                                    <div class="input">
+                                        <input class="col-sm-12 form-control" id="group-2" name="group-2" value=""
+                                            type="text" required>
+                                    </div>
+                                    <p>Email akan ditampilkan sebagai tempat menghubungi fasilitas kesehatan</p>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <form action="" method="post" enctype="multipart/form-data">
+                                    <img class="sp-img img-thumbnail " src="{{ URL::asset('assets/images/dokter3.png') }}"
+                                        alt="" style="align-self: end">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="me-2">
+                                <button class="btn btn-info">Lakukan Perubahan</button>
+                            </div>
+                            <div>
+                                <button class="btn btn-info">Tambah Spesialis</button>
+                            </div>
+                        </div>
+                        <br>
+                    </form>
+                </div>
+            </div>
         </div>
-        
     </div>
-      
-    
+
+
 
 
 @endsection
