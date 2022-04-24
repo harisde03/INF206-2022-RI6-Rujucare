@@ -1,6 +1,7 @@
 @extends('base')
 
 {{-- http://127.0.0.1:8000/find/faskes --}}
+{{-- Author: Ahmad Chairiansyah --}}
 
 @section('title', 'Pencarian Fasilitas Kesehatan')
 
