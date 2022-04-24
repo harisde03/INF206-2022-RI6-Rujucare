@@ -1,3 +1,13 @@
-.logo {
-    height: 50px;
+.home_background {
+    background: url('/assets/images/home-background.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.footer-dark {
+    padding: 50px 0;
+    color: #FFFFFF;
+    background-color: #3A3E47;
 }

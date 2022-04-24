@@ -14,61 +14,61 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('rujucare\index');
+    return view('rujucare.index');
 });
 
 Route::get('/find/faskes', function () {
-    return view('rujucare\find\faskes');
+    return view('rujucare.find.faskes');
 });
 
 Route::get('/find/spesialis', function () {
-    return view('rujucare\find\spesialis');
+    return view('rujucare.find.spesialis');
 });
 
 Route::get('/faskes', function () {
-    return view('rujucare\faskes\faskes');
+    return view('rujucare.faskes.faskes');
 });
 
 Route::get('/login', function () {
-    return view('rujucare\login\login');
+    return view('rujucare.login.login');
 });
 
 Route::get('/signup', function () {
-    return view('rujucare\signup\signup');
+    return view('rujucare.signup.signup');
 });
 
 Route::get('/signup/persetujuan', function () {
-    return view('rujucare\signup\persetujuan');
+    return view('rujucare.signup.persetujuan');
 });
 
 Route::get('/signup/persyaratan', function () {
-    return view('rujucare\signup\persyaratan');
+    return view('rujucare.signup.persyaratan');
 });
 
 Route::get('/signup/upload-surat', function () {
-    return view('rujucare\signup\upload-surat');
+    return view('rujucare.signup.upload-surat');
 });
 
 Route::get('/admin/informasi-ketersediaan', function () {
-    return view('rujucare\admin\informasi-ketersediaan');
+    return view('rujucare.admin.informasi-ketersediaan');
 });
 
 Route::get('/admin/informasi-profil', function () {
-    return view('rujucare\admin\informasi-profil');
+    return view('rujucare.admin.informasi-profil');
 });
 
 Route::get('/admin/pesan-masuk', function () {
-    return view('rujucare\admin\pesan-masuk');
+    return view('rujucare.admin.pesan-masuk');
 });
 
 Route::get('/admin/pesan-keluar', function () {
-    return view('rujucare\admin\pesan-keluar');
+    return view('rujucare.admin.pesan-keluar');
 });
 
 Route::get('/admin/rujuk', function () {
-    return view('rujucare\admin\rujuk');
+    return view('rujucare.admin.rujuk');
 });
 
 Route::get('/admin/rujuk-kembali', function () {
-    return view('rujucare\admin\rujuk-kembali');
+    return view('rujucare.admin.rujuk-kembali');
 });
