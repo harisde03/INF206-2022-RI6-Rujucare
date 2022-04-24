@@ -5,28 +5,36 @@
 @section('title', 'Login')
 
 @section('content')
-<form class="container px-5">
-  <div class="row gx-6">
-    <div class="col">
-     <div class="p-3 border bg-light" style="margin-top:60px;"><h1>Komunitas Rumah Sakit Terbesar Se-Indonesia</h1></div>
-    </div>
-    <div class="col" style="margin-top:20px;">
-    <div class="row"><h3>Login Rumah Sakit</h3></div>
-
-    <div class="form-floating mb-3" style="margin-bottom:10px;">
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-        <label for="floatingInput">Email</label>
-    </div>
-    <div class="form-floating mb-3">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-        <label for="floatingPassword">Password</label>
-    </div>
-        <div class="col-12 mb-3">
-        <button type="button" class="btn btn-success">Login</button>
-    </div>
-        <div class="row" style ="margin-top:20px;">
-        <p>Belum Mendaftarkan Rumah Sakit? <a href="{{URL('/signup')}}">Ajukan Pendaftaran</a></p>
-    </div>
-    </div>
-</form>
+<section class="vh-90">
+        <div class="d-flex align-items-center h-100">
+            <div class="container-xl">
+                <div class="row">
+                    <div class="col d-flex align-items-center justify-content-center">
+                        <h1>Komunitas Fasilitas Kesehatan Terbesar Se-Indonesia</h1>
+                    </div>
+                    <div class="col border">
+                        <form action="">
+                            <div class="m-5">
+                                <div class="">
+                                    <h4>Login Fasilitas Kesehatan</h4>
+                                </div>
+                                <div class="mt-3">
+                                    <input type="text" class="form-control" placeholder="Email Fasilitas Kesehatan">
+                                </div>
+                                <div class="mt-3">
+                                    <input type="text" class="form-control" placeholder="Password">
+                                </div>
+                                <div class="mt-3">
+                                    <button type="button" class="btn btn-teal">Login</button>
+                                </div>
+                                <div class="mt-3">
+                                    <p>Belum Mendaftarkan Fasilitas Kesehatan? <a href="{{ URL('/signup') }}" class="text-decoration-none text-teal">Ajukan Pendaftaran</a></p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 @endsection
