@@ -65,8 +65,8 @@
             <div class="boxes col-12 ">       
                 <ul class="flex-list d-flex flex-wrap ">
                     <li class="box ">
-                        <div class="box-img col-12 align-center" id ="frame-image" style="background-size:cover;">
-                            <img src="{{ URL::asset('assets/images/dokter1.png') }}" alt="">
+                        <div class="box-img col-12 " id ="frame-image" style="background-size:cover;">
+                            <img src="{{ URL::asset('assets/images/dokter1.png') }}"  alt="">
                         </div>
                         <div class="box-text col-12">
                             <strong id="" name="" >Prof. Dr. Nadia Rimawati M,Si.</strong>
