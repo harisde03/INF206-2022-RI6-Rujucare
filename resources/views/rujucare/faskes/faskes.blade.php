@@ -17,8 +17,9 @@
     {{-- Working area --}}  
     <div style="border: 0.5px solid #636161;opacity:0.2;"></div> 
     
-    <div class ="main-screen" style="background-image: url(assets/images/contohRumahSakit.png)" id="main-screen"></div>
-        <div class ="container-xl">
+    <div class ="main-screen align-items-center" style="background-image: url(assets/images/contohRumahSakit.png)" id="main-screen"></div>
+       
+        <div class ="container vw-100" style="width:auto">
             <div class= "header">
                 <h1 id = "">Rumah Sakit Umum Dr. Zainoel Abidin</h1>
             </div>
