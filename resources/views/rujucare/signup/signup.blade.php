@@ -31,9 +31,16 @@
     <div class="form-floating mb-3">
         <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
         <label for="floatingPassword">Confirm Password</label>
-    </div>
-        <div class="row">
-        <button type="button" class="btn btn-success">Daftar</button>
+     </div>
+     </div>
+     <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Dengan menekan tombol anda telah sepenuhnya 
+            menyetujui persyaratan dan persetujuan dari layanan
+        </label>
+     </div>
+    <div class="row col-2">
+    <button type="button" class="btn btn-success">Daftar</button>
     </div>
     </div>
     </div>
