@@ -8,9 +8,9 @@
 <div class="container px-5">
   <div class="row gx-6">
     <div class="col">
-     <div class="p-3 border bg-light"><h1>Komunitas Rumah Sakit Terbesar Se-Indonesia</h1></div>
-    </div>
-    <div class="col">
+    <div class="p-3 border bg-light, "><h1>Komunitas Rumah Sakit Terbesar Se-Indonesia</h1></div>
+ </div>
+  <div class="col">
     <div class="row"><h3>Daftar Rumah Sakit</h3></div>
     <div class="form-floating mb-3">
         <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
