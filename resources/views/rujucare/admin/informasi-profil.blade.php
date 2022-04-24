@@ -5,8 +5,10 @@
 @section('title', 'Informasi Profil')
 
 @section('content')
+
    {{-- Working area --}}
    <h1>Halaman Informasi Profil</h1>
             
         
+
 @endsection
