@@ -23,7 +23,7 @@
     
   <h2 class="accordion-header" id="headingTwo">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        RSUZA: Mohon pemeriksaan dan perawatan inap
+        RSU Ibu dan Anak: Mohon pemeriksaan dan perawatan inap
       </button>
     </h2>
     <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
