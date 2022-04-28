@@ -9,13 +9,13 @@ Rujucare adalah aplikasi berbasis website yang dapat membantu fasilitas kesehata
 - Haris Daffa (2008107010059)  
 👨‍💻 Maintainer and Fullstack Engineer
 - Nadia Rimawati (2008107010005)  
-👩‍💻 Frontend Engineer
+👩‍💻 Fullstack Engineer
 - Ahmad Chairiansyah (2008107010041)  
-👨‍💻 Frontend Engineer
+👨‍💻 Fullstack Engineer
 - Muny Safitri (2008107010064)  
 👩‍💻 Database Manager
 - Maghfirah ZA (2008107010075)  
-👩‍💻 Frontend Engineer
+👩‍💻 Fullstack Engineer
 
 <!-- ## Documentation -->
 
