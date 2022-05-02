@@ -93,7 +93,9 @@
             </div>
             <div class="col">
                 <div class="drop-zone offset-md-2">
-                    <span class="drop-zone__prompt">Drop file here or click to upload</span>
+                    <span class="drop-zone__prompt"></span>
+                    <img src="{{ URL::asset('assets/images/drop-file.png') }}" alt="Drop File Here"
+                                    class="p-5" style="height: 350px">
                     <input type="file" name="myFile" class="drop-zone__input">
                 </div>
             </div>

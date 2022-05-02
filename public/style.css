@@ -24,7 +24,7 @@ p {
 .main-screen {
     height: 770px;
     top: 0px;
-    background: #FFFFFF;
+    background: #d8d5d5;
     position: relative;
     background-size: cover;
     opacity: 0.7;
@@ -33,7 +33,7 @@ p {
 
 .header {
     top: 50px;
-    width: 942px;
+    width: 800px;
     height: 800px;
     position: absolute;
 }
@@ -70,6 +70,7 @@ p {
 .box-img {
     width: 300px;
     height: 250px;
+    background-size: cover;
 }
 
 .box h1 {
@@ -86,14 +87,7 @@ p {
     max-width: 310px;
 }
 
-.btn {
-    background-color: #00ADB4;
-    opacity: 0.8;
-    cursor: pointer;
-    border-radius: 10px;
-    box-shadow: 4px 6px rgba(32, 117, 113, 1);
-    float: right;
-}
+.btn {}
 
 .btn:hover {
     background-color: #00ADB4;
@@ -106,12 +100,16 @@ p {
 }
 
 .btn-rujukan {
+    background-color: #00ADB4;
+    opacity: 0.8;
+    cursor: pointer;
+    box-shadow: 4px 6px rgba(32, 117, 113, 1);
     position: relative;
 }
 
 .screen-spesial {
     position: relative;
-    height: 800px;
+    height: 900px;
     top: 30px;
     background-color: #FFFFFF;
 }
@@ -167,10 +165,9 @@ p {
     width: 320px;
 }
 
-.min-vh-90{
+.min-vh-90 {
     min-height: 90vh;
 }
-
 
 .subinfo-kiri p {
     line-height: 30px;
@@ -234,7 +231,7 @@ p {
     background-size: cover;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1250px) {
     .boxes {
         padding-top: 40px;
         position: absolute;
@@ -270,7 +267,7 @@ p {
     }
     .screen-spesial {
         position: relative;
-        height: 1400px;
+        height: 1000px;
         top: 80px;
         background-color: #FFFFFF;
     }
@@ -318,6 +315,9 @@ p {
         border-radius: 2%;
     }
     .main-screen {
-        height: 870px;
+        height: 640px;
+    }
+    .screen-spesial {
+        height: 1000px
     }
 }
