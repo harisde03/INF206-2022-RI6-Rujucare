@@ -61,21 +61,20 @@
 
 <br><br><br>
 
-<table>
+<table class="mb-3">
     <tr>
         <th>Nama Fasilitas Kesehatan</th>
         <th style="width:34.5%">Status Fasilitas Kesehatan</th>
         <th style="width:27.75%">Kamar Tersedia</th>
     </tr>
+
+    @foreach ( $post as $p)
     <tr>
-        <td>a</td>
-        <td>d</td>
-        <td>f</td>
+        <td> <a href="/faskes/{{$p->namaFaskes}}">{{$p->namaFaskes}}</a></td>
+        <td>Aktif</td>
+        <td>{{$p->getKredensial->getKetersediaan->kamarTersedia}}</td>
     </tr>
-    <tr>
-        <td>a</td>
-        <td>d</td>
-        <td>f</td>
-    </tr>
+    @endforeach
+    {
 </table>
 @endsection
