@@ -15,7 +15,73 @@
             width: 200px;
             height:200px;
         }
-    </style>
+    input[type=text],
+    textarea {
+        width: 95%;
+        padding: 7px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+    }
+
+    input[type="submit"] {
+        width: 18%;
+    }
+    input[type="file"] {
+        width: 18%;
+        border-radius: 0%;
+
+    }
+
+    .drop-zone {
+        border-radius: 50%;
+        max-width: 75%;
+        height: 200px;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-family: "Quicksand", sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        cursor: pointer;
+        color: #cccccc;
+        border: 2px solid;
+    }
+
+    .drop-zone--over {
+        border-style: solid;
+    }
+
+    .drop-zone__input {
+        display: none;
+    }
+
+    .drop-zone__thumb {
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        overflow: hidden;
+        background-color: #cccccc;
+        background-size: cover;
+        position: relative;
+    }
+
+    .drop-zone__thumb::after {
+        content: attr(data-label);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 5px 0;
+        color: #ffffff;
+        background: rgba(0, 0, 0, 0.75);
+        font-size: 14px;
+        text-align: center;
+    }
+</style>
+
 
 
     <div class="container-xl mb-5">
@@ -71,7 +137,6 @@
                         <div class="row">
                             <div class="col-8">
                                 <h3><label for="rujukanTersedia">Jumlah Rujukan Tersedia</label></h3>
-
                                 <div class="number-input">
                                     <input class="quantity col-sm-12 form-control" min="0" id="rujukanTersedia" name="rujukanTersedia"
                                         value="1" type="number" required>
@@ -115,9 +180,13 @@
                             </div>
                             <div class="col-4">
                                 <form action="" method="post" enctype="multipart/form-data">
-                                    <img class="sub-img img-thumbnail float-right "
-                                        src="{{ URL::asset('assets/images/dokter1.png') }}" alt=""
-                                        style="align-self: end">
+                                    <div class="drop-zone offset-md-2 rounded-circle">
+                                        <span class="drop-zone__prompt  col-10">
+
+                                            <i class="fas fa-user-md" style="font-size:50px"></i>
+                                            </span>
+                                            <input type="file" class="drop-zone__input" name="profilPicture">
+                                    </div>
                                 </form>
                             </div>
                         </div>
@@ -130,18 +199,18 @@
                         <div class="row">
                             <div class="col-8">
                                 <div class="box-ketersediaan col-auto">
-                                    <h3><label for="group-3">Nama Spesialis</label></h3>
+                                    <h3><label for="namaSpesialis2">Nama Spesialis</label></h3>
                                     <div class="input">
-                                        <input class=" col-sm-12 form-control" id="group-1" name="group-3" value=""
+                                        <input class=" col-sm-12 form-control" id="namaSpesialis2" name="namaSpesialis2" value=""
                                             type="text" required>
                                     </div>
                                     <p>Nama fasilitas akan ditampilkan pada halaman utama rumah sakit dan akan ditampilkan
                                         pada menu pencarian</p>
                                 </div>
                                 <div class="box-ketersediaan col-auto ">
-                                    <h3><label for="group-4"></label>Kemampuan Spesialis</h3>
+                                    <h3><label for="kemampuanSpesialis2"></label>Kemampuan Spesialis</h3>
                                     <div class="input">
-                                        <input class="col-sm-12 form-control" id="group-2" name="group-2" value=""
+                                        <input class="col-sm-12 form-control" id="kemampuanSpesialis2" name="kemampuanSpesialis2" value=""
                                             type="text" required>
                                     </div>
                                     <p>Email akan ditampilkan sebagai tempat menghubungi fasilitas kesehatan</p>
@@ -149,8 +218,13 @@
                             </div>
                             <div class="col">
                                 <form action="" method="post" enctype="multipart/form-data">
-                                    <img class="sub-img img-thumbnail" src="{{ URL::asset('assets/images/dokter2.png') }}"
-                                        alt="" style="align-self: end">
+                                    <div class="drop-zone offset-md-2 rounded-circle">
+                                        <span class="drop-zone__prompt  col-10">
+
+                                            <i class="fas fa-user-md" style="font-size:50px"></i>
+                                            </span>
+                                            <input type="file" class="drop-zone__input" name="profilPicture2">
+                                    </div>
                                 </form>
                             </div>
                         </div>
@@ -163,9 +237,9 @@
                         <div class="row">
                             <div class="col-8">
                                 <div class="box-ketersediaan col-auto">
-                                    <h3><label for="group-3">Nama Spesialis</label></h3>
+                                    <h3><label for="namaSpesialis3">Nama Spesialis</label></h3>
                                     <div class="input">
-                                        <input class=" col-sm-12 form-control" id="group-1" name="group-3" value=""
+                                        <input class=" col-sm-12 form-control" id="namaSpesialis3" name="namaSpesialis3" value=""
                                             type="text" required>
                                     </div>
                                     <p>Nama fasilitas akan ditampilkan pada halaman utama rumah sakit dan akan ditampilkan
@@ -182,8 +256,13 @@
                             </div>
                             <div class="col-4">
                                 <form action="" method="post" enctype="multipart/form-data">
-                                    <img class="sub-img img-thumbnail " src="{{ URL::asset('assets/images/dokter3.png') }}"
-                                        alt="" style="align-self: end">
+                                    <div class="drop-zone offset-md-2 rounded-circle">
+                                        <span class="drop-zone__prompt  col-10">
+
+                                            <i class="fas fa-user-md" style="font-size:50px"></i>
+                                        </span>
+                                        <input type="file" class="drop-zone__input" name="profilPicture3">
+                                    </div>
                                 </form>
                             </div>
                         </div>
@@ -201,6 +280,79 @@
             </div>
         </div>
     </div>
+    <script>
+        document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
+            const dropZoneElement = inputElement.closest(".drop-zone");
+
+            dropZoneElement.addEventListener("click", (e) => {
+                inputElement.click();
+            });
+
+            inputElement.addEventListener("change", (e) => {
+                if (inputElement.files.length) {
+                    updateThumbnail(dropZoneElement, inputElement.files[0]);
+                }
+            });
+
+            dropZoneElement.addEventListener("dragover", (e) => {
+                e.preventDefault();
+                dropZoneElement.classList.add("drop-zone--over");
+            });
+
+            ["dragleave", "dragend"].forEach((type) => {
+                dropZoneElement.addEventListener(type, (e) => {
+                    dropZoneElement.classList.remove("drop-zone--over");
+                });
+            });
+
+            dropZoneElement.addEventListener("drop", (e) => {
+                e.preventDefault();
+
+                if (e.dataTransfer.files.length) {
+                    inputElement.files = e.dataTransfer.files;
+                    updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
+                }
+
+                dropZoneElement.classList.remove("drop-zone--over");
+            });
+        });
+
+        /**
+         * Updates the thumbnail on a drop zone element.
+         *
+         * @param {HTMLElement} dropZoneElement
+         * @param {File} file
+         */
+        function updateThumbnail(dropZoneElement, file) {
+            let thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");
+
+            // First time - remove the prompt
+            if (dropZoneElement.querySelector(".drop-zone__prompt")) {
+                dropZoneElement.querySelector(".drop-zone__prompt").remove();
+            }
+
+            // First time - there is no thumbnail element, so lets create it
+            if (!thumbnailElement) {
+                thumbnailElement = document.createElement("div");
+                thumbnailElement.classList.add("drop-zone__thumb");
+                dropZoneElement.appendChild(thumbnailElement);
+            }
+
+            thumbnailElement.dataset.label = file.name;
+
+            // Show thumbnail for image files
+            if (file.type.startsWith("image/")) {
+                const reader = new FileReader();
+
+                reader.readAsDataURL(file);
+                reader.onload = () => {
+                    thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
+                };
+            } else {
+                thumbnailElement.style.backgroundImage = null;
+            }
+        }
+    </script>
 
 
 

@@ -124,6 +124,18 @@
 
                 @foreach ( $post as $p )
                 <div class="col-8">
+                    @if(session()->has('update'))
+                            <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                                    {{session('update')}}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                    @endif
+                    @if(session()->has('insert'))
+                            <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                                    {{session('insert')}}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                    @endif
                     <h2>Informasi Umum</h2>
                     <hr>
                     <form action="/admin/informasi-profil" method = "POST" enctype="multipart/form-data">
@@ -202,13 +214,8 @@
                                     <h4>Foto Profil</h4>
                                     <div class="drop-zone offset-md-2 rounded-circle">
                                         <span class="drop-zone__prompt  col-10">
+
                                             <i class="fas fa-hospital-alt" style="font-size:50px"></i>
-                                            {{-- <img class="rounded-circle"
-                                                src="{{ URL::asset('assets\images\contohRumahSakit.png') }}" alt="foto-profil"
-                                                style="height: 200px; width: 200px;">
-                                                 @error('suratPernyataan')
-                                                         {{$message}}
-                                                 @enderror --}}
                                             </span>
                                             <input type="file" class="drop-zone__input" name="faskesPicture">
                                     </div>
