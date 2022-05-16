@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('pesan_keluars', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('faskes_id');
             $table->string('noBPJS');
             $table->text('deskripsi');
             $table->string('tujuanFaskes');

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('faskes_id');
             $table->string('namaPublik');
             $table->string('emailPublik')->unique();
-            $table->string('telponPublik')->nullable();
+            $table->string('teleponPublik')->nullable();
             $table->text('deskripsiPublik');
             $table->text('alamatPublik');
             $table->string('faskesPicture')->nullable();

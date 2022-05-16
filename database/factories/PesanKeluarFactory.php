@@ -17,6 +17,7 @@ class PesanKeluarFactory extends Factory
     public function definition()
     {
         return [
+            'faskes_id'=> mt_rand(1,2),
             'noBPJS'=>$this->faker->nik(),
             'deskripsi' =>$this->faker->paragraph(),
             'tujuanFaskes' =>$this->faker->sentence(mt_rand(2,4)),

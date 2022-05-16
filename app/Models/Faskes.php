@@ -4,28 +4,46 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
-use App\Models\pesan;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Foundation\Notifiable;
+use App\Models\pesanMasuk;
 use App\Models\Kredensial;
-use App\Models\Spesialis;
+use App\Models\pesanKeluar;
 
 
 use Illuminate\Support\Facades\DB;
 
-class Faskes extends Model
+class Faskes extends Authenticatable
 {
     use HasFactory;
+    // use Notifiable;
+    protected $table = 'faskes';
 
     protected $guarded=['id'];
+
+    protected $hidden=[
+        'password','remember_token',
+    ];
+
+    public function getAuthPassword()
+    {
+        return $this->password;
+    }
+
 
     public function kredensial()
     {
         return $this->hasOne(Kredensial::class);
     }
 
-    public function pesan()
+    public function pesanMasuk()
     {
-        return $this->hasMany(Pesan::class);
+        return $this->hasMany(PesanMasuk::class);
+    }
+
+    public function pesanKeluar()
+    {
+        return $this->hasMany(PesanKeluar::class);
     }
 
     public function getKredensial(){
@@ -36,13 +54,7 @@ class Faskes extends Model
     public function scopeFilter($query){
 
         if (request('search')){
-            return $query->join('kredensials', 'kredensials.id','=','faskes.kredensial_id')
-                    ->join('spesialis','kredensials.id','=','spesialis.kredensial_id')
-                    ->where('namaFaskes', 'like','%'. request('search') . '%')
-                    ->orWhere('tingkatFaskes','like','%'. request('search') . '%')
-                    ->orWhere('namaSpesialis','like','%'. request('search') . '%');
-                    // ->DB::table('spesialis')->where('namaSpesialis','like','%'. request('search') . '%');
-
+            return $query->where('namaFaskes', 'like', '%' . request('search') . '%');
         }
     }
 

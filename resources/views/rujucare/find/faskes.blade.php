@@ -55,27 +55,42 @@
 
 <br><br><br>
 
-<form class="nosubmit position-relative">
-    <input class="form-control nosubmit position-absolute top-50 start-50 translate-middle" type="search" placeholder="Temukan Fasilitas Kesehatan">
-</form>
+<div class="row justify-content-center">
+    <div class="col-md-12">
+        <form class="nosubmit position-relative" name="search">
+            <div class="">
+                <input class="form-control nosubmit position-absolute top-50 start-50 translate-middle" autocomplete="off" type="search" name="search" placeholder="Temukan Fasilitas Kesehatan" value="{{request('search')}}">
+                <input class="btn btn-info position-absolute" type="hidden">
+            </div>
+        </form>
+    </div>
+</div>
 
 <br><br><br>
+@if ($post->count())
+    <table class="mb-3">
+        <tr>
+            <th>Nama Fasilitas Kesehatan</th>
+            <th style="width:34.5%">Status Fasilitas Kesehatan</th>
+            <th style="width:27.75%">Kamar Tersedia</th>
+        </tr>
 
-<table>
-    <tr>
-        <th>Nama Fasilitas Kesehatan</th>
-        <th style="width:34.5%">Status Fasilitas Kesehatan</th>
-        <th style="width:27.75%">Kamar Tersedia</th>
-    </tr>
-    <tr>
-        <td> <a href="{{URL('/faskes')}}" >a</a></td>
-        <td>d</td>
-        <td>f</td>
-    </tr>
-    <tr>
-        <td>a</td>
-        <td>d</td>
-        <td>f</td>
-    </tr>
-</table>
+        @foreach ( $post as $p)
+        <tr>
+            <td> <a href="/faskes/{{$p->namaFaskes}}" >{{$p->namaFaskes}}</a></td>
+            <td>Aktif</td>
+            <td>{{$p->getKredensial->getKetersediaan->kamarTersedia}}</td>
+        </tr>
+        @endforeach
+
+    </table>
+@else
+    <p class="text-center fs-4">Faskes Tidak Ditemukan</p>
+
+@endif
+<div class="d-flex justify-content-end">
+    {{$post->links()}}
+</div>
+
+
 @endsection

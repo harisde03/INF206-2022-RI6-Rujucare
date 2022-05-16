@@ -86,15 +86,6 @@ p {
     max-width: 310px;
 }
 
-.btn {
-    background-color: #00ADB4;
-    opacity: 0.8;
-    cursor: pointer;
-    border-radius: 10px;
-    box-shadow: 4px 6px rgba(32, 117, 113, 1);
-    float: right;
-}
-
 .btn:hover {
     background-color: #00ADB4;
     opacity: 1;
@@ -107,6 +98,12 @@ p {
 }
 
 .btn-rujukan {
+    background-color: #00ADB4;
+    opacity: 0.8;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 4px 6px rgba(32, 117, 113, 1);
+    float: right;
     position: relative;
 }
 
@@ -330,3 +327,4 @@ p {
         height: 870px;
     }
 }
+

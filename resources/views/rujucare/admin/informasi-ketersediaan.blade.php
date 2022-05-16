@@ -7,6 +7,7 @@
 @section('content')
     {{-- Working area --}}
     {{-- Author : Muny Safitri --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
         .sub-img{
@@ -15,7 +16,7 @@
             height:200px;
         }
     </style>
-       
+
 
     <div class="container-xl mb-5">
         <div class="col">
@@ -66,44 +67,47 @@
                     <h2>Informasi Ketersediaan</h2>
                     <hr>
                     <form action="">
+                        @csrf
                         <div class="row">
                             <div class="col-8">
-                                <h3><label for="group-1">Jumlah Rujukan Tersedia</label></h3>
-                                <link rel="stylesheet"
-                                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+                                <h3><label for="rujukanTersedia">Jumlah Rujukan Tersedia</label></h3>
+
                                 <div class="number-input">
-                                    <input class="quantity col-sm-12 form-control" min="0" id="group-1" name="group-1"
+                                    <input class="quantity col-sm-12 form-control" min="0" id="rujukanTersedia" name="rujukanTersedia"
                                         value="1" type="number" required>
                                 </div>
                                 <p>Jumlah rujukan akan menjadi tujuan utama bagi staff rumah sakit untuk membuat rujukan</p>
                             </div>
                             <div class="col-8">
-                                <h3><label for="group-2"></label>Jumlah Kamar Tersedia</h3>
+                                <h3><label for="kamarTersedia"></label>Jumlah Kamar Tersedia</h3>
                                 <div class="number-input">
-                                    <input class="quantity col-sm-12 form-control" min="0" id="group-2" name="group-2"
+                                    <input class="quantity col-sm-12 form-control" min="0" id="kamarTersedia" name="kamarTersedia"
                                         value="1" type="number" required>
                                 </div>
                                 <p>Jumlah kamar akan menjadi tujuan utama bagi staff rumah sakit untuk membuat rujukan</p>
                             </div>
                             <div></div>
                         </div>
-                        <div class="col"><button class="btn btn-info">Lakukan Perubahan</button></div>
+
+                        <div class="col">
+                            <button class="btn btn-info">Lakukan Perubahan</button></div>
                         <br>
+
                         <div class="row">
                             <div class="col-8">
                                 <div class="box-ketersediaan col-auto">
-                                    <h3><label for="group-3">Nama Spesialis</label></h3>
+                                    <h3><label for="namaSpesialis">Nama Spesialis</label></h3>
                                     <div class="input">
-                                        <input class=" col-sm-12 form-control" id="group-1" name="group-3" value=""
+                                        <input class=" col-sm-12 form-control" id="namaSpesialis" name="namaSpesialis" value=""
                                             type="text" required>
                                     </div>
                                     <p>Nama fasilitas akan ditampilkan pada halaman utama rumah sakit dan akan ditampilkan
                                         pada menu pencarian</p>
                                 </div>
                                 <div class="box-ketersediaan col-auto ">
-                                    <h3><label for="group-4"></label>Kemampuan Spesialis</h3>
+                                    <h3><label for="kemampuanSpesialis"></label>Kemampuan Spesialis</h3>
                                     <div class="input">
-                                        <input class="col-sm-12 form-control" id="group-2" name="group-2" value=""
+                                        <input class="col-sm-12 form-control" id="kemampuanSpesialis" name="kemampuanSpesialis" value=""
                                             type="text" required>
                                     </div>
                                     <p>Email akan ditampilkan sebagai tempat menghubungi fasilitas kesehatan</p>
@@ -117,12 +121,14 @@
                                 </form>
                             </div>
                         </div>
+
                         <div class="col">
                             <button class="btn btn-info">Lakukan Perubahan</button>
                         </div>
                         <br>
+
                         <div class="row">
-                            <div class="col">
+                            <div class="col-8">
                                 <div class="box-ketersediaan col-auto">
                                     <h3><label for="group-3">Nama Spesialis</label></h3>
                                     <div class="input">
@@ -141,17 +147,19 @@
                                     <p>Email akan ditampilkan sebagai tempat menghubungi fasilitas kesehatan</p>
                                 </div>
                             </div>
-                            <div class="col-5">
+                            <div class="col">
                                 <form action="" method="post" enctype="multipart/form-data">
                                     <img class="sub-img img-thumbnail" src="{{ URL::asset('assets/images/dokter2.png') }}"
                                         alt="" style="align-self: end">
                                 </form>
                             </div>
                         </div>
+
                         <div class="col">
                             <button class="btn btn-sm btn-info">Lakukan Perubahan</button>
                         </div>
                         <br>
+
                         <div class="row">
                             <div class="col-8">
                                 <div class="box-ketersediaan col-auto">

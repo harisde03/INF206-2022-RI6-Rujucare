@@ -16,10 +16,15 @@
 @section('content')
     {{-- Working area --}}
     <link rel="stylesheet" href="{{asset('style.css')}}">
+    <style>
+        .main-screen{
+            background-image: url(assets/images/contohRumahSakit.png);
+        }
+    </style>
 
     <div style="border: 0.5px solid #636161;opacity:0.2;"></div>
 
-    <div class ="main-screen align-items-center" style="background-image: url(assets/images/contohRumahSakit.png);" id="main-screen"></div>
+    <div class ="main-screen align-items-center" style="" id="main-screen"></div>
 
         <div class ="container vw-100" style="width:auto">
             <div class= "header">
@@ -43,6 +48,7 @@
                         </div>
                     </li>
                 </ul>
+                @auth
                 <div class="buatRujukan col-lg-3 " id="buatRujukan">
                     <button type="button"  >
                         <a href="{{URL('/admin/rujuk')}}" class="btn btn-rujukan btn-info float-right" >
@@ -50,6 +56,7 @@
                         </button>
                     </div>
                 </div>
+                @endauth
 
 
             </div>
@@ -67,7 +74,6 @@
 
                     <div class="boxes col-12 ">
                         <ul class="flex-list d-flex flex-wrap ">
-
                             @foreach ($post->getKredensial->getSpesialis as $p)
                                 <li class="box ">
                                     <div class="box-img center col-12 "  style="background-image: url(assets/images/dokter2.png);background-size:cover; margin:auto">
@@ -79,24 +85,7 @@
                                     </div>
                                 </li>
                            @endforeach
-                    {{-- <li class="box ">
-                        <div class="box-img center "  style="background-image: url(assets/images/dokter2.png);background-size:cover; margin:auto">
-                            <img src="{{ URL::asset('assets/images/dokter2.png') }}" alt="" >
-                        </div>
-                        <div class="box-text justify-content-center col-12">
-                            <strong id="" name="" >Dr. Muny Safitri</strong>
-                            <p>Spesialis Anak</p>
-                        </div>
-                    </li>
-                    <li class="box ">
-                        <div class="box-img center col-12" id ="frame-image"style="background-image: url(assets/images/dokter3.png);background-size:cover;"></div>
-                        <div class="box-text col-12">
-                            <strong id="" name="" >Prof. Dr. Maghfirah ZA</strong>
-                            <p>Spesialis Kulit</p>
-                        </div>
-                    </li> --}}
                 </ul>
-
             </div>
         </div>
     </div>
@@ -106,8 +95,8 @@
     <div class="screen-info" id="screen-info">
         <div class="container-xl">
             <div class="text-center justify-content-lg-center">
-                <h1>Informasi <span>Rumah Sakit Umum Dr. Zainoel Abidin</span></h1>
-                <p style="margin-top:20px; max-width: 900px; margin: auto; "><span>Rumah Sakit Umum Dr. Zainoel Abidin mempunyai tugas memberikan pelayanan kesehatan perorangan secara paripurna</span></p>
+                <h1>Informasi <span>{{$post->namaFaskes}}</span></h1>
+                <p style="margin-top:20px; max-width: 900px; margin: auto; "><span>{{$post->namaFaskes}}</span> mempunyai tugas memberikan pelayanan kesehatan perorangan secara paripurna</p>
             </div>
             <div class="subinfo-kiri">
                 <blockquote style="margin-top:50px">
@@ -126,6 +115,17 @@
         </div>
     </div>
 </div>
+<!-- Jquery Library file -->
+<script src=".asset/js/Jquery3.4.1.min.js"></script>
+
+<!-- --------- Owl-Carousel js ------------------->
+<script src=".asset/js/owl.carousel.min.js"></script>
+
+<!-- ------------ AOS js Library  ------------------------- -->
+<script src=".asset/js/aos.js"></script>
+
+<!-- Custom Javascript file -->
+<script src=".asset/js/main.js"></script>
 
 
 @endsection

@@ -21,20 +21,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
-        Faskes::factory(2)->create();
 
-        Ketersediaan::factory(2)->create();
 
-        Kredensial::factory(2)->create();
+        PesanKeluar::factory(10)->create();
 
-        Pesan::factory(5)->create();
+        PesanMasuk::factory(10)->create();
 
-        PesanKeluar::factory(5)->create();
-
-        PesanMasuk::factory(5)->create();
-
-        Spesialis::factory(3)->create();
+        Spesialis::factory(10)->create();
 
 
 
