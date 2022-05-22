@@ -24,7 +24,7 @@
                                 <div class="mt-3">
                                     <input type="text" class="form-control" placeholder="Password">
                                 </div>
-                                <div class="mt-3">
+                                <div class="mb-3">
                                     <button type="button" class="btn btn-teal">Login</button>
                                 </div>
                                 <div class="mt-3">
