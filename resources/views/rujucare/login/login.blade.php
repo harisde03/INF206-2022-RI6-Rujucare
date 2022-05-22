@@ -50,8 +50,8 @@
                                         </div>
                                     @enderror
                                 </div>
-                                <div class="mt-3">
-                                    <button  type="submit" class="btn btn-teal">Login</button>
+                                <div class="mb-3">
+                                    <button type="button" class="btn btn-teal">Login</button>
                                 </div>
                                 <div class="mt-3">
                                     <p>Belum Mendaftarkan Fasilitas Kesehatan? <a href="{{ URL('/signup') }}" class="text-decoration-none text-teal">Ajukan Pendaftaran</a></p>

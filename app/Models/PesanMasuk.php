@@ -13,8 +13,8 @@ class PesanMasuk extends Model
 
     protected $guarded=['id'];
 
-    public function faskes()
+    public function pesan()
     {
-        return $this->belongsTo(Faskes::class);
+        return $this->hasOne(Pesan::class);
     }
 }
