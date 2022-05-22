@@ -17,5 +17,4 @@ class PesanKeluar extends Model
         return $this->hasOne(Pesan::class);
     }
 
-
 }

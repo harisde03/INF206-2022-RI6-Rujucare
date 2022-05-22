@@ -5,16 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-use App\Models\pesan;
+use App\Models\kredensial;
 
-class PesanMasuk extends Model
+class Ketersediaan extends Model
 {
     use HasFactory;
 
     protected $guarded=['id'];
 
-    public function pesan()
+    public function kredensial()
     {
-        return $this->hasOne(Pesan::class);
+        return $this->belongsTo(Kredensial::class);
     }
 }
