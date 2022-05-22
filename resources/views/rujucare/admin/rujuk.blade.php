@@ -79,10 +79,10 @@
                 <label for="nbpjs">
                     <h5>Nomor BPJS</h5>
                 </label> <br>
-                <input type="text" id="nbpjs"">
+                <input type="text" id="nbpjs">
                 <p>Nomor BPJS memiliki data informasi pasien secara lengkap. Pastikan tidak salah dalam penginputan data.</p>
                 <label for=" dkpasien">
-                <h5>Deskripsi Kebutuhan Pasien</h5>
+                    <h5>Deskripsi Kebutuhan Pasien</h5>
                 </label> <br>
                 <textarea id="dkpasien" style="height:200px"></textarea>
                 <p>Deskripsikan secara rinci kebutuhan yang dibutuhkan oleh pasien.</p>
@@ -93,9 +93,9 @@
             </div>
             <div class="col">
                 <div class="drop-zone offset-md-2">
-                    <span class="drop-zone__prompt"></span>
-                    <img src="{{ URL::asset('assets/images/drop-file.png') }}" alt="Drop File Here"
-                                    class="p-5" style="height: 350px">
+                    <span class="drop-zone__prompt mb-2 col-10">
+                        <img src="{{ URL::asset('assets/images/drop-file.png') }}" alt="Drop File Here" class="p-5 " style="height: 350px">
+                        Drop file here or click to upload</span>
                     <input type="file" name="myFile" class="drop-zone__input">
                 </div>
             </div>
