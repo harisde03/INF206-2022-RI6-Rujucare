@@ -50,7 +50,6 @@ Route::get('/signup/upload-surat',[registerController::class, 'upload'])->middle
 
 Route::post('/signup/upload-surat',[registerController::class, 'store'])->middleware('guest');
 
-
 Route::get('/signup/persetujuan', function () {
     return view('rujucare.signup.persetujuan');
 })->middleware('guest');
@@ -58,8 +57,6 @@ Route::get('/signup/persetujuan', function () {
 Route::get('/signup/persyaratan', function () {
     return view('rujucare.signup.persyaratan');
 })->middleware('guest');
-
-
 
 Route::get('/admin/informasi-ketersediaan', function () {
     return view('rujucare.admin.informasi-ketersediaan');

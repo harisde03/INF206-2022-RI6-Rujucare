@@ -11,8 +11,6 @@
             <div class="container-xl">
 
                 <div class="row">
-
-
                     <div class="col d-flex align-items-center justify-content-center">
                         <h1>Komunitas Fasilitas Kesehatan Terbesar Se-Indonesia</h1>
                     </div>

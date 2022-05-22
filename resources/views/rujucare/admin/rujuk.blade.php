@@ -82,7 +82,7 @@
                 <input type="text" id="nbpjs">
                 <p>Nomor BPJS memiliki data informasi pasien secara lengkap. Pastikan tidak salah dalam penginputan data.</p>
                 <label for=" dkpasien">
-                <h5>Deskripsi Kebutuhan Pasien</h5>
+                    <h5>Deskripsi Kebutuhan Pasien</h5>
                 </label> <br>
                 <textarea id="dkpasien" style="height:200px"></textarea>
                 <p>Deskripsikan secara rinci kebutuhan yang dibutuhkan oleh pasien.</p>
