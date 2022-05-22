@@ -15,7 +15,7 @@ return [
 
     'defaults' => [
         'guard' => 'web',
-        'passwords' => 'users',
+        'passwords' => 'faskes',
     ],
 
     /*
@@ -62,7 +62,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => App\Models\User::class,
+            'model' => App\Models\Faskes::class,
         ],
 
         // 'users' => [
@@ -88,7 +88,7 @@ return [
 
     'passwords' => [
         'users' => [
-            'provider' => 'users',
+            'provider' => 'faskes',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,

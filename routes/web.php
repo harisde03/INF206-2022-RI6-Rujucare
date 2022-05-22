@@ -3,9 +3,12 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FaskesController;
 use App\Http\Controllers\pesanMasukController;
+use App\Http\Controllers\pesanKeluarController;
 use App\Http\Controllers\SpesialisController;
 use App\Http\Controllers\registerController;
 use App\Http\Controllers\loginController;
+use App\Http\Controllers\kredensialController;
+use App\Http\Controllers\logoutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,80 +26,66 @@ Route::get('/', function () {
 });
 
 Route::get('/find/faskes', [FaskesController::class, 'index']);
-    // return view('rujucare.find.faskes',[
-    //     'title' => 'Pencarian Fasilitas Kesehatan',
-    //     'post'  => Faskes::all()
-    // ]);
-// });
 
 Route::get('/find/spesialis',[SpesialisController::class, 'index']);
-//     return view('rujucare.find.spesialis');
+
+// Route::get('/faskes', function () {
+//     return view('rujucare.faskes.faskes');
 // });
 
-
-
-
-
-Route::get('/faskes', function () {
-    return view('rujucare.faskes.faskes');
-});
-
 //rute jika faskes
-Route::get('/faskes/{post:namaFaskes}',[FaskesController::class, 'show']);
+Route::get('/faskes/{post:namaPublik}',[FaskesController::class, 'show']);
+
+Route::get('/login',[loginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/login',[loginController::class, 'authenticate']);
+
+//blum terbaca logout
 
 
-Route::get('/login',[loginController::class, 'index']);
-Route::post('/login',[registerController::class, 'store']);
-
-// Route::post('/login',[loginController::class, 'authenticate']);
-
-Route::get('/signup', [registerController::class, 'index']);
+Route::get('/signup', [registerController::class, 'index'])->middleware('guest');
+Route::post('/signup', [registerController::class, 'upload'])->middleware('guest');
     //
 
-Route::get('/signup/upload-surat',[registerController::class, 'upload']);
+Route::get('/signup/upload-surat',[registerController::class, 'upload'])->middleware('guest');
 
-Route::post('/signup/upload-surat',[registerController::class, 'upload']);
-
-
-
-
-
+Route::post('/signup/upload-surat',[registerController::class, 'store'])->middleware('guest');
 
 Route::get('/signup/persetujuan', function () {
     return view('rujucare.signup.persetujuan');
-});
+})->middleware('guest');
 
 Route::get('/signup/persyaratan', function () {
     return view('rujucare.signup.persyaratan');
-});
-
-
+})->middleware('guest');
 
 Route::get('/admin/informasi-ketersediaan', function () {
     return view('rujucare.admin.informasi-ketersediaan');
+})->middleware('auth');
+
+Route::post('/admin/informasi-ketersediaan', function () {
+    return view('rujucare.admin.informasi-ketersediaan');
 });
 
-Route::post('/admin/informasi-ketersediaan',[loginController::class, 'authenticate']);
+// Route::post('/admin/informasi-ketersediaan',[loginController::class, 'authenticate']);
 
+Route::get('/admin/informasi-profil',[kredensialController::class, 'index'])->middleware('auth');
+Route::post('/admin/informasi-profil',[kredensialController::class, 'store']);
 
-Route::get('/admin/informasi-profil', function () {
-    return view('rujucare.admin.informasi-profil');
-});
+Route::get('/admin/pesan-masuk',[pesanMasukController::class,'index'])->middleware('auth');
 
-Route::get('/admin/pesan-masuk',[pesanMasukController::class,'index']);
-//     return view('rujucare.admin.pesan-masuk',[
-//         'post' =>
-//     ]);
-// });
-
-Route::get('/admin/pesan-keluar', function () {
-    return view('rujucare.admin.pesan-keluar');
-});
+Route::get('/admin/pesan-keluar', [pesanKeluarController::class,'index'])->middleware('auth');
 
 Route::get('/admin/rujuk', function () {
     return view('rujucare.admin.rujuk');
-});
+})->middleware('auth');
 
 Route::get('/admin/rujuk-kembali', function () {
     return view('rujucare.admin.rujuk-kembali');
-});
+})->middleware('auth');
+
+
+Route::post('/logout', [logoutController::class, 'keluar']);
+
+Route::get('/admin/informasi-profil/createURLFaskes', [kredensialController::class, 'checkURLFaskes'])->middleware('auth');
+// Route::get('/logout', [logoutController::class, 'keluar']);
+

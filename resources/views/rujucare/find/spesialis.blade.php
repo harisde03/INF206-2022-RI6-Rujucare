@@ -56,33 +56,49 @@
 
 <br><br><br>
 
-<form class="nosubmit position-relative" action="/find/spesialis">
-    <input class="form-control nosubmit position-absolute top-50 start-50 translate-middle" type="text" placeholder="Temukan Spesialis" name="search" autocomplete="off">
-</form>
+<div class="row justify-content-center">
+    <div class="col-md-12">
+        <form class="nosubmit position-relative" name="search">
+            <div class="">
+                <input class="form-control nosubmit position-absolute top-50 start-50 translate-middle" autocomplete="off" type="search" name="search" placeholder="Temukan Fasilitas Kesehatan" value="{{request('search')}}">
+                <input class="btn btn-info position-absolute" type="hidden">
+            </div>
+        </form>
+    </div>
+</div>
 
 <br><br><br>
+@if ($post->count())
+    <table class= "mb-3">
+        <tr>
+            <th style="width: 37.75%">Nama Spesialis</th>
+            <th>Kemampuan Spesialis</th>
+            <th>Rujukan Tersedia</th>
+        </tr>
 
-<table class="mb-3">
-    <tr>
-        <th style="width: 37.75%">Nama Spesialis</th>
-        <th>Kemampuan Spesialis</th>
-        <th>Rujukan Tersedia</th>
-    </tr>
-    {{-- @dd($post[0]->getKredensial->getSpesialis[0]->namaSpesialis) --}}
-    @foreach ( $post as $p )
-    @foreach ($p->getKredensial->getSpesialis as $spesialis)
-    <tr>
-    <tr>
-        <td>
-            <a href="/faskes/{{$p->namaFaskes}}" style="text-decoration: none">
-                {{$spesialis->namaSpesialis}}
-            </a>
-        </td>
-        <td>{{$spesialis->kemampuanSpesialis}}</td>
-        <td>{{$p->getKredensial->getketersediaan->kamarTersedia}}</td>
-    </tr>
-    </tr>
-    @endforeach
-    @endforeach
-</table>
+            @foreach($post as $p)
+                <tr>
+                    <tr>
+                        <td>
+                            <a href="/faskes/{{$p->kredensial->namaPublik}}" style="text-decoration: none" >
+
+                                    {{$p->namaSpesialis}}
+
+                            </a>
+                        </td>
+                        <td>{{$p->kemampuanSpesialis}}</td>
+                        <td>{{$p->kredensial->getketersediaan->kamarTersedia}}</td>
+                    </tr>
+                </tr>
+                @endforeach
+
+    </table>
+    @else
+    <p class="text-center fs-4">Faskes Tidak Ditemukan</p>
+@endif
+
+<div class="d-flex justify-content-center">
+    {{$post->links()}}
+</div>
+
 @endsection
