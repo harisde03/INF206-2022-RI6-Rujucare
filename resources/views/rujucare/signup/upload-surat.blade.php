@@ -92,12 +92,14 @@
 
                                             </span>
                                         <input type="file" class="drop-zone__input" name="suratPernyataan">
-                                        @error('suratPernyataan')
-                                                {{$message}}
-                                        @enderror
                                     </div>
                                 </div>
                         </div>
+                                        @error('suratPernyataan')
+                                                <div class="invalid-feedback">
+                                        {{$message}}
+                                        </div>
+                                        @enderror
 
                         <div class="col">
                             <div class="">
@@ -108,7 +110,6 @@
                             </div>
                             <div class="">
                                 <button href="/login/login" type="submit"  class="btn btn-teal">Ajukan</button>
-
                             </div>
                         </div>
                     </div>

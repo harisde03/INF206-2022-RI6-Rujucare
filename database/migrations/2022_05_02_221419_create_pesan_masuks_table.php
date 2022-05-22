@@ -15,7 +15,8 @@ return new class extends Migration
     {
         Schema::create('pesan_masuks', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('faskes_id');
+            $table->integer('asalFaskes_id')->nullable();//pesan  yang sudah terautifikasi
+            $table->foreignId('faskes_id');// arh faskes tujuannya
             $table->string('noBPJS');
             $table->text('deskripsi');
             $table->string('asalFaskes');

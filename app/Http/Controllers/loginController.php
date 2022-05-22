@@ -28,16 +28,6 @@ class loginController extends Controller
         return back()->with('LoginError','Login Failed!');
     }
 
-    public function logout(Request $request)
-    {
-        dd($request->all());
-        Auth::logout();
 
-        $request->session()->invalidate();
-
-        $request->session()->regenerateToken();
-
-        return redirect('/');
-    }
 
 }

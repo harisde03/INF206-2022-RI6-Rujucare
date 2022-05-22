@@ -77,9 +77,9 @@
 
         @foreach ( $post as $p)
         <tr>
-            <td> <a href="/faskes/{{$p->namaFaskes}}" >{{$p->namaFaskes}}</a></td>
+            <td> <a href="/faskes/{{$p->namaPublik}}" >{{$p->namaPublik}}</a></td>
             <td>Aktif</td>
-            <td>{{$p->getKredensial->getKetersediaan->kamarTersedia}}</td>
+            <td>{{$p->getKetersediaan->kamarTersedia}}</td>
         </tr>
         @endforeach
 

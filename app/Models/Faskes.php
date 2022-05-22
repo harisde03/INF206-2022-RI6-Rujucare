@@ -51,11 +51,6 @@ class Faskes extends Authenticatable
         return $this->kredensial();
     }
 
-    public function scopeFilter($query){
 
-        if (request('search')){
-            return $query->where('namaFaskes', 'like', '%' . request('search') . '%');
-        }
-    }
 
 }

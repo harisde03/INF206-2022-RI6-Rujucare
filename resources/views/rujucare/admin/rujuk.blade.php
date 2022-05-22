@@ -22,8 +22,8 @@
     }
 
     .drop-zone {
-        max-width: 75%;
-        height: 100%;
+        max-width: 200px;
+        height: 200px;
         padding: 25px;
         display: flex;
         align-items: center;
@@ -73,7 +73,7 @@
 <p style="font-size: 45px; text-align: center">Pengajuan Surat Rujukan</p>
 <br> <br>
 <div class="container">
-    <form action="">
+    <form action="" method="post">
         <div class="row">
             <div class="col">
                 <label for="nbpjs">

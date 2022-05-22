@@ -8,6 +8,7 @@ use App\Http\Controllers\SpesialisController;
 use App\Http\Controllers\registerController;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\kredensialController;
+use App\Http\Controllers\logoutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,13 +34,13 @@ Route::get('/find/spesialis',[SpesialisController::class, 'index']);
 // });
 
 //rute jika faskes
-Route::get('/faskes/{post:namaFaskes}',[FaskesController::class, 'show']);
+Route::get('/faskes/{post:namaPublik}',[FaskesController::class, 'show']);
 
 Route::get('/login',[loginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login',[loginController::class, 'authenticate']);
 
 //blum terbaca logout
-Route::post('/logout', [loginController::class, 'logout']);
+
 
 Route::get('/signup', [registerController::class, 'index'])->middleware('guest');
 Route::post('/signup', [registerController::class, 'upload'])->middleware('guest');
@@ -84,3 +85,10 @@ Route::get('/admin/rujuk', function () {
 Route::get('/admin/rujuk-kembali', function () {
     return view('rujucare.admin.rujuk-kembali');
 })->middleware('auth');
+
+
+Route::post('/logout', [logoutController::class, 'keluar']);
+
+Route::get('/admin/informasi-profil/createURLFaskes', [kredensialController::class, 'checkURLFaskes'])->middleware('auth');
+// Route::get('/logout', [logoutController::class, 'keluar']);
+

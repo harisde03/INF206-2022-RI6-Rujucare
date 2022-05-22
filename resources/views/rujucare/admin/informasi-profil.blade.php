@@ -145,7 +145,7 @@
                                 <input type="hidden" name="faskes_id" value="{{$p->id}}">
                                 <div class="mt-2">
                                     <h4>Nama Fasilitas Kesehatan</h4>
-                                    <input name="namaPublik" type="text" class="form-control my-2 @error('namaPublik') is-invalid @enderror" placeholder="Nama Fasilitas Kesehatan" value="{{$p->namaFaskes}}">
+                                    <input id="namaPublik" name="namaPublik" type="text" class="form-control my-2 @error('namaPublik') is-invalid @enderror" placeholder="Nama Fasilitas Kesehatan" value="{{$p->namaFaskes}}" >
                                     <p>Nama fasilitas akan ditampilkan pada halaman utama rumah sakit dan akan ditampilkan
                                         pada menu
                                         pencarian.</p>
@@ -155,6 +155,9 @@
                                     </div>
                                     @enderror
                                 </div>
+
+                                {{-- <input type="text" name="urlFaskes" id="urlFaskes" value disabled readonly> --}}
+
                                 <div class="mt-2">
                                     <h4>Email Publik</h4>
                                     <input name="emailPublik" type="text" class="form-control my-2  @error('emailPublik') is-invalid @enderror" placeholder="Email Publik"value="{{$p->email}}">
@@ -199,11 +202,31 @@
                                     <h4>Tingkat Fasilitas Kesehatan</h4>
                                     <select name="tingkatFaskes" class="form-select">
                                         <option>Pilih Tingkat Fasilitas Kesehatan</option>
+                                        @if($p->tingkatFaskes === 'A')
+                                        <option selected>A</option>
+                                        @else
                                         <option>A</option>
+                                        @endif
+                                        @if($p->tingkatFaskes === 'B')
+                                        <option selected>B</option>
+                                        @else
                                         <option>B</option>
+                                        @endif
+                                        @if($p->tingkatFaskes === 'C')
+                                        <option selected>C</option>
+                                        @else
                                         <option>C</option>
+                                        @endif
+                                        @if($p->tingkatFaskes === 'D')
+                                        <option selected>D</option>
+                                        @else
                                         <option>D</option>
+                                        @endif
+                                        @if($p->tingkatFaskes === 'Lainnya')
+                                        <option selected>Lainnya</option>
+                                        @else
                                         <option>Lainnya</option>
+                                        @endif
                                     </select>
                                     <p>Perubahan tingkat fasilitas kesehatan membutuhkan konfirmasi.</p>
                                 </div>
@@ -231,7 +254,11 @@
             </div>
         </div>
     </div>
+
+
     <script>
+
+
         document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
             const dropZoneElement = inputElement.closest(".drop-zone");
 
@@ -303,5 +330,6 @@
                 thumbnailElement.style.backgroundImage = null;
             }
         }
+
     </script>
 @endsection

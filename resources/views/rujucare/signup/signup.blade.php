@@ -13,6 +13,13 @@
                         <h1>Komunitas Fasilitas Kesehatan Terbesar Se-Indonesia</h1>
                     </div>
                     <div class="col border">
+                                    {{-- @error('suratPernyataan')
+                                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                        {{$message}}
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+    
+                                        @enderror --}}
                         <form action="/signup" method="post">
                             @csrf
 

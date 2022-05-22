@@ -21,12 +21,19 @@ class registerController extends Controller
     { ///
         //  dd(request());
         //return  $request->file('suratPernyataan')->store('post-image');
+        
+        // if(validate([
+        //     'suratPernyataan' =>'required|image|file|max:1024'
+        // ])){
+        //     return "berhasil";
+
+        // }
         $validateData = $request->validate([
+            'namaFaskes' => 'required|max:255',
             'email' => 'required|email|unique:faskes',
-            'tingkatFaskes' => 'required|max:255',
-            'namaFaskes' => 'required|min:5|max:255',
-            'password' => 'required|min:5|max:255',
-            'suratPernyataan' =>'image|file|max:1024 '
+            'tingkatFaskes' => 'required',
+            'password' => 'required|string|min:5|max:255',
+            'suratPernyataan' =>'required|image|file|max:1024 '
 
         ]);
         //dd("berhasil");

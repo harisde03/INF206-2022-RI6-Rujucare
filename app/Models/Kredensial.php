@@ -9,6 +9,7 @@ use App\Models\spesialis;
 use App\Models\ketersediaan;
 use App\Models\faskes;
 
+
 class Kredensial extends Model
 {
     use HasFactory;
@@ -28,4 +29,11 @@ class Kredensial extends Model
     {
         return $this->belongsTo(Faskes::class);
     }
+    public function scopeFilter($query){
+
+        if (request('search')){
+            return $query->where('namaPublik', 'like', '%' . request('search') . '%');
+        }
+    }
+
 }

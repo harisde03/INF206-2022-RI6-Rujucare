@@ -6,55 +6,39 @@ use Illuminate\Http\Request;
 use App\Models\Faskes;
 use App\Models\Kredensial;
 use Illuminate\Support\Facades\DB;
-use App\Http\Controllers\Exception;
-use Illuminate\Support\Facades\Auth;
+
 
 class kredensialController extends Controller
 {
+
     public function index(){
-        // return "hello";
-        // return Faskes::where('id',auth()->user()->id)->get();
         return view('rujucare.admin.informasi-profil',[
             "post" =>  Faskes::where('id',auth()->user()->id)->get()
         ]);
     }
 
     public function store(Request $request)
-    { ///
-       // return DB::table('kredensials')->where('faskes_id',Auth()->user()->id)->get();
-        // dd($kredensial->is_null);
-        //return  $request->file('suratPernyataan')->store('post-image');
-        //  dd("berhasil");
+    {
         $validateData= $request->validate([
             'faskes_id' => 'required',
             'emailPublik' => 'required|email',
             'namaPublik' => 'required|max:255',
-            'deskripsiPublik' => 'required|max:255',
-            'alamatPublik' =>'required|max:255',
+            'deskripsiPublik' => 'max:255',
+            'alamatPublik' =>'max:255',
             'teleponPublik' => 'required|numeric',
-            'faskesPicture' =>'image|file|max:1024'
+            'faskesPicture' =>'image|file|max:1024',
+            'tingkatFaskes' =>'required'
         ]);
-
+        $validateData['urlFaskes'] =  strtolower(str_replace(" ", "-", $validateData['namaPublik']));
 
         $kredensial = DB::table('kredensials')->where('faskes_id',Auth()->user()->id)->get();
-        //dd($kredensial->contains(1));
-
-        //return $request->file('faskesPicture')->store('post-image');
-
         if($request->file('faskesPicture')){
             $validateData['faskesPicture'] = $request->file('faskesPicture')->store('post-image');
-            //return $request->file('faskesPicture')->store('post-image');;
-
             }
         //store
         try{
             if($kredensial->contains(1) === false) {
-                // $this->$rules['faskes_id'] = 'required';
-                //return "berhasil";
-                // $this->$rules['emailPublik'] = 'required|email';
 
-
-                    //return $validateData;
 
                     Kredensial::create($validateData);
 
@@ -63,15 +47,22 @@ class kredensialController extends Controller
         }catch(\Exception $e){
 
         }
-                // return "berhasil";
+
+
         //update
         Kredensial::where('faskes_id',$kredensial[0]->faskes_id)
                     ->update($validateData);
+        $updateFaskes = [
 
-        // $validateData['urlFaskes'] = "gchg";
-        // Kredensial::create($validateData);
+            'email'=> $request->emailPublik,
+            'namaFaskes' => $request->namaPublik,
+            'tingkatFaskes' =>  $request->tingkatFaskes
+        ];
+        Faskes::where('id',auth()->user()->id)
+        ->update($updateFaskes);
 
         return redirect('/admin/informasi-profil')->with('update','informasi profil sudah di-update');
 
     }
+
 }

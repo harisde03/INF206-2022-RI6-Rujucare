@@ -15,7 +15,8 @@ return new class extends Migration
     {
         Schema::create('pesan_keluars', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('faskes_id');
+            $table->integer('tujuanFaskes_id')->nullable();//id dari route binding
+            $table->foreignId('faskes_id');//id yang auth
             $table->string('noBPJS');
             $table->text('deskripsi');
             $table->string('tujuanFaskes');

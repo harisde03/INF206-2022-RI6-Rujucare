@@ -16,11 +16,13 @@ return new class extends Migration
         Schema::create('kredensials', function (Blueprint $table) {
             $table->id();
             $table->foreignId('faskes_id');
-            $table->string('namaPublik');
-            $table->string('emailPublik');
+            $table->string('namaPublik')->nullable();
+            $table->string('urlFaskes');
+            $table->string('emailPublik')->nullable();
             $table->string('teleponPublik')->nullable();
-            $table->text('deskripsiPublik');
-            $table->text('alamatPublik');
+            $table->text('deskripsiPublik')->nullable();
+            $table->text('alamatPublik')->nullable();
+            $table->string('tingkatFaskes')->nullable();
             $table->string('faskesPicture')->nullable();
             $table->timestamps();
         });
