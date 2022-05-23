@@ -13,7 +13,13 @@
                         <h1>Komunitas Fasilitas Kesehatan Terbesar Se-Indonesia</h1>
                     </div>
                     <div class="col border">
-                        <form action="/signup/upload-surat" method="post">
+                                    {{-- @error('suratPernyataan')
+                                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                        {{$message}}
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>    
+                                        @enderror --}}
+                        <form action="/signup" method="post">
                             @csrf
 
                             <div class="m-5">
@@ -62,7 +68,7 @@
                                     <label class="form-check-label"for="exampleCheck1">Dengan menekan tombol daftar anda telah sepenuhnya menyetujui  <a href="{{ URL('/signup/persetujuan') }}" class="text-teal text-decoration-none">persetujuan</a> dan <a href="{{ URL('/signup/persyaratan') }}" class="text-teal text-decoration-none">persyaratan</a> dari layanan kami</label>
                                 </div>
                                 <div class="mt-3">
-                                    <button href="/signup/upload-surat" class="btn btn-teal" role="button">Daftar</button>
+                                    <button type="submit" class="btn btn-teal" role="button">Daftar</button>
                                     {{-- <a href="/signup" class="btn btn-teal" role="button">Daftar</a> --}}
                                 </div>
                                 <input type="hidden" class="border-0" >
