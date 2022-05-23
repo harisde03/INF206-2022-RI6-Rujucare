@@ -3,16 +3,16 @@ li {
 }
 
 h1 {
-    opacity: 1.0;
-    font-family: 'Montserrat';
+    opacity: 1;
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 400;
     font-size: 40px;
 }
 
 p {
-    opacity: 1.0;
-    font-family: 'Montserrat';
+    opacity: 1;
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
@@ -22,28 +22,20 @@ p {
 }
 
 .main-screen {
-    height: 770px;
+    height: 725px;
     top: 0px;
-    background: #FFFFFF;
+    background: #ffffff;
     position: relative;
     background-size: cover;
     opacity: 0.7;
     padding-bottom: 40px;
 }
 
-.header {
-    top: 50px;
-    width: 942px;
-    height: 800px;
-    position: absolute;
-}
-
-.header h1 {
-    /* Hero H1 */
+.faskes {
     line-height: 50px;
     letter-spacing: -0.015em;
     color: #000;
-    padding-top: 45px;
+    padding: 40px 0 0 33px;
     display: grid;
     grid-template-columns: 40% auto;
 }
@@ -58,7 +50,7 @@ p {
 .box {
     width: 350px;
     height: 450px;
-    background: #FFFFFF;
+    background: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.5);
     box-sizing: border-box;
     float: left;
@@ -74,30 +66,23 @@ p {
 
 .box h1 {
     margin: 100px 0px 40px 0px;
-    color: #00ADB5;
+    color: #00adb5;
     font-weight: 700;
     letter-spacing: -0.015em;
     line-height: 80px;
     text-align: center;
     font-size: 144px;
+    padding-bottom: 40px;
 }
 
 .box p {
     max-width: 310px;
 }
 
-.btn {
-    background-color: #00ADB4;
-    opacity: 0.8;
-    cursor: pointer;
-    border-radius: 10px;
-    box-shadow: 4px 6px rgba(32, 117, 113, 1);
-    float: right;
-}
-
 .btn:hover {
-    background-color: #00ADB4;
+    background-color: #00adb4;
     opacity: 1;
+    color: #ffffff;
 }
 
 .btn:active {
@@ -106,23 +91,18 @@ p {
 }
 
 .btn-rujukan {
+    background-color: #00adb4;
+    opacity: 0.8;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 4px 6px rgba(32, 117, 113, 1);
+    float: right;
     position: relative;
-}
-
-.screen-spesial {
-    position: relative;
-    height: 800px;
-    top: 30px;
-    background-color: #FFFFFF;
-}
-
-.box-text {
-    width: 250px;
 }
 
 .box-text p {
     padding-top: 10px;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -132,16 +112,11 @@ p {
 }
 
 .box-text strong {
-    padding-top: 20px;
+    padding-top: 40px;
     padding-left: 64px;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-size: 24px;
-    display: grid;
     grid-template-columns: 80% auto;
-}
-
-.box-img {
-    width: 100%
 }
 
 .flex-list {
@@ -167,11 +142,6 @@ p {
     width: 320px;
 }
 
-.min-vh-90{
-    min-height: 90vh;
-}
-
-
 .subinfo-kiri p {
     line-height: 30px;
 }
@@ -191,50 +161,7 @@ p {
     border-radius: 2%;
 }
 
-.sidenav {
-    height: 1817px;
-    width: 420px;
-    position: fixed;
-    z-index: 1;
-    top: 0px;
-    left: 0px;
-    background-color: #fff;
-    overflow-x: hidden;
-    padding-top: 20px;
-}
-
-.sidenav li {
-    float: left;
-    list-style: none;
-}
-
-.sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 14px;
-    color: #818181;
-    display: block;
-    font-weight: 600;
-    line-height: 17px;
-    font-style: normal;
-    font-family: 'Montserrat';
-    float: left;
-}
-
-#frame-image {
-    overflow: hidden;
-    position: relative;
-}
-
-#frame-image img {
-    max-height: 320px;
-    position: relative;
-    left: 0px;
-    top: 0px;
-    background-size: cover;
-}
-
-@media (max-width: 900px) {
+@media (max-width: 800px) {
     .boxes {
         padding-top: 40px;
         position: absolute;
@@ -245,7 +172,7 @@ p {
     .box {
         width: 250px;
         height: 350px;
-        background: #FFFFFF;
+        background: #ffffff;
         border: 1px solid rgba(0, 0, 0, 0.5);
         box-sizing: border-box;
         float: left;
@@ -258,12 +185,12 @@ p {
     }
     .box h1 {
         margin: 100px 0px 40px 0px;
-        color: #00ADB5;
+        color: #00adb5;
         font-weight: 700;
         letter-spacing: -0.015em;
         line-height: 60px;
         text-align: center;
-        font-size: 100px;
+        font-size: 80px;
     }
     .box p {
         max-width: 210px;
@@ -272,14 +199,14 @@ p {
         position: relative;
         height: 1400px;
         top: 80px;
-        background-color: #FFFFFF;
+        background-color: #ffffff;
     }
     .box-text {
         width: 350px;
     }
     .box-text p {
         padding-top: 5px;
-        font-family: 'Montserrat';
+        font-family: "Montserrat";
         font-style: normal;
         font-weight: 400;
         font-size: 10px;
@@ -290,7 +217,7 @@ p {
     .box-text strong {
         padding-top: 0px;
         padding-left: 34px;
-        font-family: 'Montserrat';
+        font-family: "Montserrat";
         font-size: 14px;
         display: grid;
         grid-template-columns: 80% auto;
@@ -311,7 +238,7 @@ p {
 @media (max-width: 700px) {
     .subinfo-kanan img {
         height: 300px;
-        width: 300px;
+        width: auto;
         float: left;
         background-size: cover;
         border: 0.8px solid #050505;
@@ -320,4 +247,32 @@ p {
     .main-screen {
         height: 870px;
     }
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding-bottom: 20px;
+}
+
+.card {
+    position: relative;
+    border-radius: 20px;
+    margin: 40px 0;
+    width: 280px;
+}
+
+.card .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    position: relative;
+    z-index: 100;
+}
+
+.name strong {
+    font-size: 20px;
 }

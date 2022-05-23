@@ -12,7 +12,7 @@ class SpesialisController extends Controller
     public function index(){
 
         return view('rujucare.find.spesialis',[
-            'post'  => Faskes::filter()->get()
+            'post'  => Spesialis::latest()->filter()->paginate(7)->withQueryString()
         ]);
     }
 

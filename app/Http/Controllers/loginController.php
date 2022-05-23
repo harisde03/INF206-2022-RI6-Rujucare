@@ -10,22 +10,21 @@ class loginController extends Controller
     public function index(){
         return view('rujucare.login.login');
     }
+
     public function authenticate(Request $request){
-        $request->validate([
-            'email' => 'required|email:dns',
+
+        $credential= $request->validate([
+            'email' => 'required|email',
             'password' => 'required'
         ]);
-        dd("berhasilll");
+
 
         if(Auth::attempt($credential)){
             $request->session()->regenerate();
-            return redirect()->intended('/admin');
+
+            return redirect()->intended('/admin/informasi-ketersediaan');
 
         }
-
-        return back()->with('Login error','Login Failed!');
-
-
+        return back()->with('LoginError','Login Failed!');
     }
-
 }
