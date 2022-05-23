@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Faskes;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,9 +18,11 @@ class SpesialisFactory extends Factory
     public function definition()
     {
         return [
-            'namaSpesialis' => $this->faker->name(),
-            'KemampuanSpesialis' => $this->faker->sentence(mt_rand(2,4)),
-            'kredensial_id' => mt_rand(1,2)
+            'id_kredensial' => $this->faker->numberBetween(1, Faskes::count()),
+
+            'namaSpesialis' => $this->faker->name,
+            'kemampuanSpesialis' => $this->faker->text,
+            'profilePicture' => $this->faker->imageUrl(400, 400, 'people'),
         ];
     }
 }

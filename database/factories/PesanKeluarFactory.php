@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Faskes;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -16,11 +17,21 @@ class PesanKeluarFactory extends Factory
      */
     public function definition()
     {
+        $id_pengirim = $this->faker->numberBetween(1, Faskes::count());
+        $id_penerima = $this->faker->numberBetween(1, Faskes::count());
+
+        while ($id_pengirim == $id_penerima) {
+            $id_penerima = $this->faker->numberBetween(1, Faskes::count());
+        }
+
         return [
-            'faskes_id'=> mt_rand(1,2),
-            'noBPJS'=>$this->faker->nik(),
-            'deskripsi' =>$this->faker->paragraph(),
-            'tujuanFaskes' =>$this->faker->sentence(mt_rand(2,4)),
+            'id_faskes_pengirim' => $id_pengirim,
+            'id_faskes_penerima' => $id_penerima,
+
+            'nomorBpjs' => $this->faker->numberBetween(1000000000000, 9999999999999),
+            'deskripsiPesanKeluar' => $this->faker->text,
+            'persetujuanPesanKeluar' => $this->faker->numberBetween(0, 2),
+            'gambarPesanKeluar' => $this->faker->imageUrl(720, 960, 'letters'),
         ];
     }
 }
