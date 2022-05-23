@@ -1,7 +1,6 @@
 @extends('base')
 
 {{-- http://127.0.0.1:8000/admin/pesan-masuk --}}
-{{-- Author: Maghfirah ZA --}}
 
 @section('title', 'Pesan Masuk')
 

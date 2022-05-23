@@ -1,7 +1,7 @@
 @extends('base')
 
+
 {{-- http://127.0.0.1:8000/admin/informasi-ketersediaan --}}
-{{-- Author: Muny Safitri --}}
 
 @section('title', 'Informasi Ketersediaan')
 

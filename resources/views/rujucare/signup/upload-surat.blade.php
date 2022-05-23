@@ -1,7 +1,6 @@
 @extends('base')
 
 {{-- http://127.0.0.1:8000/signup/upload-surat --}}
-{{-- Author: Nadia Rimawati --}}
 
 @section('title', 'Upload Surat')
 
