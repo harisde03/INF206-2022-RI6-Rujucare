@@ -161,6 +161,11 @@ a.text-teal:focus {
     height: 80vh;
 }
 
+.min-vh-90 {
+    min-height: 90vh;
+}
+
+
 .vh-90 {
     height: 90vh;
 }

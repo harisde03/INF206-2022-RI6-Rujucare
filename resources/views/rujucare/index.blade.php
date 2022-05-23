@@ -23,7 +23,7 @@
                     </div>
                     <div class="card col-12 col-md-5 col-lg-4 col-xxl-3 align-self-center" style="padding: 32px; margin: 16px 16px 0px 0px; border-radius: 30px;">
                         <i class="fas fa-hospital-alt" style="font-size: 64px;"></i><br>
-                        <h5>Temukan Fasilitas Kesehatan</h5>
+                        <h5 class="text-nowrap">Temukan Fasilitas Kesehatan</h5>
                         <a href="{{ URL('/find/faskes') }}" class="stretched-link"></a>
                     </div>
                 </div>

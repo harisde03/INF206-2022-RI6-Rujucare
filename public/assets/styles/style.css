@@ -45,7 +45,7 @@ h3 {
 }
 
 button.btn {
-    border: none;
+    /* border: none; */
     cursor: pointer;
 }
 

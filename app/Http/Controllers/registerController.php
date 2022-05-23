@@ -8,8 +8,10 @@ use App\Models\Faskes;
 use Illuminate\Foundation\Auth\RegisterUser;
 
 class registerController extends Controller
+
 {
     // use RegisterUser;
+
     public function index()
     {
         return view('rujucare.signup.signup');
@@ -19,19 +21,13 @@ class registerController extends Controller
     { ///
         //  dd(request());
         //return  $request->file('suratPernyataan')->store('post-image');
-        
-        // if(validate([
-        //     'suratPernyataan' =>'required|image|file|max:1024'
-        // ])){
-        //     return "berhasil";
-
-        // }
         $validateData = $request->validate([
-            'namaFaskes' => 'required|max:255',
             'email' => 'required|email|unique:faskes',
-            'tingkatFaskes' => 'required',
-            'password' => 'required|string|min:5|max:255',
-            'suratPernyataan' =>'required|image|file|max:1024 '
+            'tingkatFaskes' => 'required|max:255',
+            'namaFaskes' => 'required|min:5|max:255',
+            'password' => 'required|min:5|max:255',
+            'suratPernyataan' =>'image|file|max:1024 '
+
         ]);
         //dd("berhasil");
 
@@ -59,8 +55,9 @@ class registerController extends Controller
     // public function uploadGambar(Request $request){
     //     return $request->file('suratPernyataan')->store('post-images');
     // }
-  
     public function login(){
         return view('rujucare.login.login');
     }
 }
+
+

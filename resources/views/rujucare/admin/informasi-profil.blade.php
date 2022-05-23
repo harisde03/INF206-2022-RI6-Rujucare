@@ -6,99 +6,101 @@
 @section('title', 'Informasi Profil')
 
 @section('content')
-<style>
-    input[type=text],
-    textarea {
-        width: 95%;
-        padding: 7px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        resize: vertical;
-    }
+    <style>
+        .sub-img {
+            border-radius: 80%;
+            width: 200px;
+        }
 
-    input[type="submit"] {
-        width: 18%;
-    }
-    input[type="file"] {
-        width: 18%;
-        border-radius: 0%;
+        input[type=text],
+        textarea {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
 
-    }
+        input[type="submit"] {
+            width: 18%;
+        }
 
-    .drop-zone {
-        border-radius: 50%;
-        max-width: 75%;
-        height: 200px;
-        padding: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        font-family: "Quicksand", sans-serif;
-        font-weight: 500;
-        font-size: 20px;
-        cursor: pointer;
-        color: #cccccc;
-        border: 2px solid;
-    }
+        input[type="file"] {
+            width: 18%;
+            border-radius: 0%;
+        }
 
-    .drop-zone--over {
-        border-style: solid;
-    }
+        .drop-zone {
+            font-family: "Quicksand", sans-serif;
+            font-weight: 500;
+            font-size: 20px;
+            cursor: pointer;
+            color: #cccccc;
+        }
 
-    .drop-zone__input {
-        display: none;
-    }
+        .drop-zone--over {
+            border-style: solid;
+        }
 
-    .drop-zone__thumb {
-        width: 100%;
-        height: 100%;
-        border-radius: 100%;
-        overflow: hidden;
-        background-color: #cccccc;
-        background-size: cover;
-        position: relative;
-    }
+        .drop-zone__input {
+            display: none;
+        }
 
-    .drop-zone__thumb::after {
-        content: attr(data-label);
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        padding: 5px 0;
-        color: #ffffff;
-        background: rgba(0, 0, 0, 0.75);
-        font-size: 14px;
-        text-align: center;
-    }
-</style>
-    {{-- @dd($post) --}}
+        .drop-zone__thumb {
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+            overflow: hidden;
+            background-color: #cccccc;
+            background-size: cover;
+            position: relative;
+        }
 
-    <div class="container-xl mb-5">
+        .drop-zone__thumb::after {
+            content: attr(data-label);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            color: #ffffff;
+            background: rgba(0, 0, 0, 0.75);
+            font-size: 14px;
+            text-align: center;
+        }
+
+    </style>
+    <section class="container-xl mb-4 min-vh-90">
         <div class="col">
-            @foreach ( $post as $p )
             <div class="row my-4">
-                <div class="d-flex" style="width: 280px;">
-                    <img class="rounded-circle" src="{{ URL::asset('assets\images\contohRumahSakit.png') }}"
-                        alt="foto-profil" style="height: 64px; width: 64px;">
-                    <div class=" align-self-center ps-3 text-teal text-nowrap">
-                        <h5 class="mb-0 col-5">{{$p->namaFaskes}}</h5>
+                <div class="d-flex">
+
+                    @if ($post->kredensial->faskesPicture != null)
+                        <img class="rounded-circle" src="{{ URL::asset("storage/" . $post->kredensial->faskesPicture) }}"
+                            alt="{{ $post->kredensial->namaPublik }}"
+                            style="height: 64px; width: 64px; object-fit: cover;">
+                    @else
+                        <div class="text-teal border rounded-circle d-flex justify-content-center align-items-center"
+                            style="height: 64px; width: 64px;">
+                            <i class="fas fa-hospital-alt" style="font-size:28px"></i>
+                        </div>
+                    @endif
+
+                    <div class="align-self-center ps-3 text-teal text-nowrap">
+                        <h5 class="mb-0">{{ $post->kredensial->namaPublik }}</h5>
                         <h5 class="mb-0 fw-normal">Informasi Umum</h5>
                     </div>
                 </div>
             </div>
-            @endforeach
             <div class="row">
-                <div class="mt-2 d-flex flex-column flex-shrink-0" style="width: 280px;">
+                <div class="col-12 col-lg-3 mb-4">
                     <ul class="nav nav-pills flex-column mb-auto">
                         <li class="nav-item">
-                            <a href="{{ URL('/admin/informasi-ketersediaan') }}" class="nav-link link-dark">
+                            <a href="{{ URL('/admin/informasi-ketersediaan') }}" class="nav-link link-dark"
+                                aria-current="page">
                                 Informasi Ketersediaan
                             </a>
                         </li>
                         <li>
-                            <a href="{{ URL('/admin/informasi-profil') }}" class="nav-link active" aria-current="page">
+                            <a href="{{ URL('/admin/informasi-profil') }}" class="nav-link active">
                                 Informasi Profil Umum
                             </a>
                         </li>
@@ -115,133 +117,143 @@
                         </li>
                         <hr>
                         <li>
-                            <a href="{{ URL('/faskes') }}" class="nav-link link-dark">
+                            <a href="{{ URL('/faskes/' . $post->kredensial->urlFaskes) }}" class="nav-link link-dark">
                                 Simpan dan Keluar
                             </a>
                         </li>
                     </ul>
                 </div>
 
-                @foreach ( $post as $p )
-                <div class="col-8">
-                    @if(session()->has('update'))
-                            <div class="alert alert-primary alert-dismissible fade show" role="alert">
-                                    {{session('update')}}
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                            </div>
+
+                <div class="col">
+                    @if (session()->has('update'))
+                        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                            {{ session('update') }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                aria-label="Close"></button>
+                        </div>
                     @endif
-                    @if(session()->has('insert'))
-                            <div class="alert alert-primary alert-dismissible fade show" role="alert">
-                                    {{session('insert')}}
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                            </div>
+                    @if (session()->has('insert'))
+                        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                            {{ session('insert') }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                aria-label="Close"></button>
+                        </div>
                     @endif
                     <h2>Informasi Umum</h2>
                     <hr>
-                    <form action="/admin/informasi-profil" method = "POST" enctype="multipart/form-data">
+                    <form action="/admin/informasi-profil" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
-                            <div class="col-8">
-                                <input type="hidden" name="faskes_id" value="{{$p->id}}">
+                            <div class="col-12 order-last col-lg-8 order-lg-first">
+                                <input type="hidden" name="id_faskes" value="{{ $post->id_faskes }}">
                                 <div class="mt-2">
                                     <h4>Nama Fasilitas Kesehatan</h4>
-                                    <input id="namaPublik" name="namaPublik" type="text" class="form-control my-2 @error('namaPublik') is-invalid @enderror" placeholder="Nama Fasilitas Kesehatan" value="{{$p->namaFaskes}}" >
-                                    <p>Nama fasilitas akan ditampilkan pada halaman utama rumah sakit dan akan ditampilkan
+                                    <input name="namaPublik" type="text"
+                                        class="form-control my-2 @error('namaPublik') is-invalid @enderror"
+                                        placeholder="Nama Fasilitas Kesehatan"
+                                        value="{{ $post->kredensial->namaPublik }}">
+                                    <p>Nama fasilitas akan ditampilkan pada halaman utama rumah sakit dan akan
+                                        ditampilkan
                                         pada menu
                                         pencarian.</p>
                                     @error('namaPublik')
-                                    <div class="invalid-feedback">
-                                       {{$message}}
-                                    </div>
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
                                     @enderror
                                 </div>
-
-                                {{-- <input type="text" name="urlFaskes" id="urlFaskes" value disabled readonly> --}}
-
                                 <div class="mt-2">
                                     <h4>Email Publik</h4>
-                                    <input name="emailPublik" type="text" class="form-control my-2  @error('emailPublik') is-invalid @enderror" placeholder="Email Publik"value="{{$p->email}}">
+                                    <input name="emailPublik" type="text"
+                                        class="form-control my-2  @error('emailPublik') is-invalid @enderror"
+                                        placeholder="Email Publik" value="{{ $post->kredensial->emailPublik }}">
                                     <p>Email akan ditampilkan sebagai tempat menghubungi fasilitas kesehatan.</p>
                                     @error('emailPublik')
-                                    <div class="invalid-feedback">
-                                       {{$message}}
-                                    </div>
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
                                     @enderror
                                 </div>
                                 <div class="mt-2">
                                     <h4>Telepon Publik</h4>
-                                    <input name="teleponPublik" type="text" class="form-control my-2 @error('teleponPublik') is-invalid @enderror" placeholder="Telepon Publik">
+                                    <input name="teleponPublik" type="text"
+                                        class="form-control my-2 @error('teleponPublik') is-invalid @enderror"
+                                        placeholder="Telepon Publik" value="{{ $post->kredensial->teleponPublik }}">
                                     <p>Nomor Telepon merupakan nomor yang dapat dihubungi untuk keadaan emergensi.</p>
                                     @error('teleponPublik')
-                                    <div class="invalid-feedback">
-                                       {{$message}}
-                                    </div>
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
                                     @enderror
                                 </div>
                                 <div class="mt-2">
                                     <h4>Deskripsi Fasilitas Kesehatan</h4>
-                                    <textarea name="deskripsiPublik" class="form-control my-2 @error('deskripsiPublik') is-invalid @enderror" rows="5" placeholder="Deskripsi Fasilitas Kesehatan"></textarea>
+                                    <textarea name="deskripsiPublik" class="form-control my-2 @error('deskripsiPublik') is-invalid @enderror" rows="5"
+                                        placeholder="Deskripsi Fasilitas Kesehatan">{{ $post->kredensial->deskripsiPublik }}</textarea>
                                     <p>Deskripsi hanya menampilkan informasi umum terkait fasilitas kesehatan.</p>
                                     @error('deskripsiPublik')
-                                    <div class="invalid-feedback">
-                                       {{$message}}
-                                    </div>
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
                                     @enderror
                                 </div>
                                 <div class="mt-2">
                                     <h4>Alamat Fasilitas Kesehatan</h4>
-                                    <textarea name="alamatPublik" class="form-control my-2  @error('alamatPublik') is-invalid @enderror" rows="5" placeholder="Alamat Fasilitas Kesehatan"></textarea>
+                                    <textarea name="alamatPublik" class="form-control my-2  @error('alamatPublik') is-invalid @enderror" rows="5"
+                                        placeholder="Alamat Fasilitas Kesehatan">{{ $post->kredensial->alamatPublik }}</textarea>
                                     <p>Alamat fasilitas lengkap.</p>
                                     @error('alamatPublik')
-                                    <div class="invalid-feedback">
-                                       {{$message}}
-                                    </div>
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
                                     @enderror
                                 </div>
                                 <div class="mt-2">
                                     <h4>Tingkat Fasilitas Kesehatan</h4>
-                                    <select name="tingkatFaskes" class="form-select">
-                                        <option>Pilih Tingkat Fasilitas Kesehatan</option>
-                                        @if($p->tingkatFaskes === 'A')
-                                        <option selected>A</option>
-                                        @else
-                                        <option>A</option>
-                                        @endif
-                                        @if($p->tingkatFaskes === 'B')
-                                        <option selected>B</option>
-                                        @else
-                                        <option>B</option>
-                                        @endif
-                                        @if($p->tingkatFaskes === 'C')
-                                        <option selected>C</option>
-                                        @else
-                                        <option>C</option>
-                                        @endif
-                                        @if($p->tingkatFaskes === 'D')
-                                        <option selected>D</option>
-                                        @else
-                                        <option>D</option>
-                                        @endif
-                                        @if($p->tingkatFaskes === 'Lainnya')
-                                        <option selected>Lainnya</option>
-                                        @else
-                                        <option>Lainnya</option>
+                                    <select name="tingkatPublik" class="form-select">
+                                        @if ($post->kredensial->tingkatPublik === 'Tingkat 1')
+                                            <option selected="selected">Tingkat 1</option>
+                                            <option>Tingkat 2</option>
+                                            <option>Tingkat 3</option>
+                                        @elseif ($post->kredensial->tingkatPublik === 'Tingkat 2')
+                                            <option>Tingkat 1</option>
+                                            <option selected="selected">Tingkat 2</option>
+                                            <option>Tingkat 3</option>
+                                        @elseif ($post->kredensial->tingkatPublik === 'Tingkat 3')
+                                            <option>Tingkat 1</option>
+                                            <option>Tingkat 2</option>
+                                            <option selected="selected">Tingkat 3</option>
                                         @endif
                                     </select>
                                     <p>Perubahan tingkat fasilitas kesehatan membutuhkan konfirmasi.</p>
                                 </div>
                                 <button href="#" class="btn btn-teal">Lakukan Perubahan</button>
                             </div>
-                            <div class="col-4">
+                            <div class="col-12 order-first col-lg-4 order-lg-last mb-4">
+
                                 <div class="mt-2">
                                     <h4>Foto Profil</h4>
-                                    <div class="drop-zone offset-md-2 rounded-circle">
-                                        <span class="drop-zone__prompt  col-10">
+                                    <form method="POST" action="" enctype="multipart/form-data">
+                                        <div class="d-flex justify-content-center align-items-center h-100 w-100">
+                                            <div class="rounded-circle border d-flex justify-content-center align-items-center drop-zone my-4"
+                                                style="width: 200px; height: 200px;">
 
-                                            <i class="fas fa-hospital-alt" style="font-size:50px"></i>
-                                            </span>
-                                            <input type="file" class="drop-zone__input" name="faskesPicture">
-                                    </div>
+                                                @if ($post->kredensial->faskesPicture != null)
+                                                    <img class="rounded-circle drop-zone__prompt"
+                                                        src="{{ URL::asset("storage/" . $post->kredensial->faskesPicture) }}"
+                                                        alt="{{ $post->kredensial->namaPublik }}"
+                                                        style="height: 200px; width: 200px; object-fit: cover; position: absolute;">
+                                                @else
+                                                    <span class="drop-zone__prompt">
+                                                        <i class="fas fa-hospital-alt" style="font-size:50px"></i>
+                                                    </span>
+                                                @endif
+
+                                                <input type="file" class="drop-zone__input" name="faskesPicture">
+                                            </div>
+                                        </div>
+                                    </form>
                                     <p>Foto Profil akan ditampilkan sebagai foto utama Fasilitas Kesehatan. Gunakan foto
                                         resolusi
                                         tinggi.</p>
@@ -250,15 +262,10 @@
                         </div>
                     </form>
                 </div>
-                @endforeach
             </div>
         </div>
-    </div>
-
-
+    </section>
     <script>
-
-
         document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
             const dropZoneElement = inputElement.closest(".drop-zone");
 
@@ -330,6 +337,5 @@
                 thumbnailElement.style.backgroundImage = null;
             }
         }
-
     </script>
 @endsection
