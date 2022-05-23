@@ -5,35 +5,47 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-use App\Models\spesialis;
-use App\Models\ketersediaan;
-use App\Models\faskes;
-
-
 class Kredensial extends Model
 {
     use HasFactory;
-    protected $guarded=['id'];
 
-    public function getSpesialis()
-    {
-        return $this->hasMany(Spesialis::class);
-    }
+    protected $table = 'kredensial';
+    protected $primaryKey = 'id_kredensial';
+    protected $fillable = [
+        'id_kredensial',
+        'emailPublik',
+        'namaPublik',
+        'tingkatPublik',
+        'urlFaskes',
+    ];
 
-    public function getKetersediaan()
-    {
-        return $this->hasOne(Ketersediaan::class);
-    }
-
+    /**
+     * Get the faskes that owns the Kredensial
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
     public function faskes()
     {
-        return $this->belongsTo(Faskes::class);
-    }
-    public function scopeFilter($query){
-
-        if (request('search')){
-            return $query->where('namaPublik', 'like', '%' . request('search') . '%');
-        }
+        return $this->belongsTo(Faskes::class, 'id_faskes', 'id_kredensial');
     }
 
+    /**
+     * Get all of the spesialis for the Kredensial
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function spesialis()
+    {
+        return $this->hasMany(Spesialis::class, 'id_kredensial', 'id_kredensial');
+    }
+
+    /**
+     * Get the ketersediaan associated with the Kredensial
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function ketersediaan()
+    {
+        return $this->hasOne(Ketersediaan::class, 'id_ketersediaan', 'id_kredensial');
+    }
 }
