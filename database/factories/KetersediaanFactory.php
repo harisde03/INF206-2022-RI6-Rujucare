@@ -17,9 +17,8 @@ class KetersediaanFactory extends Factory
     public function definition()
     {
         return [
-            'rujukanTersedia' => mt_rand(1,100),
-            'KamarTersedia'=> mt_rand(1,100),
-            'kredensial_id'=> mt_rand(1,2)
+            'rujukanTersedia' => $this->faker->numberBetween(1, 50),
+            'kamarTersedia' => $this->faker->numberBetween(1, 50),
         ];
     }
 }

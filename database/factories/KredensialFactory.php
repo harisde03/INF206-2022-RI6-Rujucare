@@ -16,12 +16,19 @@ class KredensialFactory extends Factory
      */
     public function definition()
     {
+        $nama_publik = $this->faker->name;
+        $url_publik   = str_replace(' ', '-', strtolower($nama_publik));
+        $email_publik = str_replace(' ', '_', strtolower($nama_publik)) . '@gmail.com';
+
         return [
-            'namaPublik'=>$this->faker->sentence(mt_rand(2,4)),
-            'emailPublik'=>$this->faker->unique()->safeEmail(),
-            'alamatPublik' =>$this->faker->paragraph(),
-            'deskripsiPublik' => $this-> faker->paragraph(),
-            'faskes_id' => mt_rand(1,2),
+            'namaPublik' => $nama_publik,
+            'emailPublik' => $email_publik,
+            'teleponPublik' => $this->faker->phoneNumber,
+            'deskripsiPublik' => $this->faker->text,
+            'alamatPublik' => $this->faker->address,
+            'tingkatPublik' => $this->faker->randomElement(['Tingkat 1', 'Tingkat 2', 'Tingkat 3']),
+            'faskesPicture' => $this->faker->imageUrl(1280, 720, 'building'),
+            'urlFaskes' => $url_publik,
         ];
     }
 }
