@@ -62,7 +62,6 @@ p {
 .box-img {
     width: 300px;
     height: 250px;
-    background-size: cover;
 }
 
 .box h1 {
@@ -198,7 +197,7 @@ p {
     }
     .screen-spesial {
         position: relative;
-        height: 1000px;
+        height: 1400px;
         top: 80px;
         background-color: #ffffff;
     }
@@ -246,10 +245,7 @@ p {
         border-radius: 2%;
     }
     .main-screen {
-        height: 640px;
-    }
-    .screen-spesial {
-        height: 1000px
+        height: 870px;
     }
 }
 
