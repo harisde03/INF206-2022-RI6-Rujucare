@@ -1,6 +1,7 @@
 @extends('base')
 
 {{-- http://127.0.0.1:8000/signup/persetujuan --}}
+{{-- Author: Nadia Rimawati --}}
 
 @section('title', 'Persetujuan')
 
@@ -43,16 +44,14 @@
                 <div class="col-8">
                     <h2>Persetujuan Fasilitas Kesehatan</h2>
                     <hr>
-                    <p class="text-justify">
-                    Dengan menggunakan atau menelusuri situs webstie Rujucare ini, Anda mengakui bahwa Anda telah membaca, memahami, dan setuju untuk terikat syarat dan ketentuan ini serta seluruh peraturan perundang-undangan yang berlaku.
-Jika Anda tidak setuju untuk terikat dengan syarat dan ketentuan ini, jangan gunakan situs ini.
-Kami dapat mengubah syarat dan ketentuan ini sewaktu-waktu tanpa pemberitahuan terlebih dahulu.
-Oleh karena itu, kami menyarankan agar Anda mengunjungi situs ini secara berkala guna mempelajari kembali syarat dan ketentuan ini.
-Jika Anda menggunakan situs ini setelah kami melakukan perubahan, Anda setuju untuk menerima perubahan tersebut, terlepas dari apakah Anda sudah benar-benar mempelajarinya atau tidak.
-                    </p>
+                    <p class="text-justify">Dengan menggunakan atau menelusuri situs webstie Rujucare ini, Anda mengakui bahwa Anda telah membaca, memahami, dan setuju untuk terikat syarat dan ketentuan ini serta seluruh peraturan perundang-undangan yang berlaku.</p>
+                    <p> Jika Anda tidak setuju untuk terikat dengan syarat dan ketentuan ini, jangan gunakan situs ini. </p>
+                    <p> Kami dapat mengubah syarat dan ketentuan ini sewaktu-waktu tanpa pemberitahuan terlebih dahulu.
+                    <p> Oleh karena itu, kami menyarankan agar Anda mengunjungi situs ini secara berkala guna mempelajari kembali syarat dan ketentuan ini.</p>
+                    <p> Jika Anda menggunakan situs ini setelah kami melakukan perubahan, Anda setuju untuk menerima perubahan tersebut, terlepas dari apakah Anda sudah benar-benar mempelajarinya atau tidak.</p>
                 </div>
             </div>
         </div>
     </div>
-   
+
 @endsection
