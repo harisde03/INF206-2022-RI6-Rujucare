@@ -13,7 +13,7 @@
     {{-- <link rel="stylesheet" href="{{ URL::asset('assets/styles/font.css') }}"> --}}
     <link rel="stylesheet" href="{{ URL::asset('assets/styles/style.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('assets/styles/custom.css') }}">
-    
+
     {{-- Favicon --}}
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
@@ -38,8 +38,27 @@
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-teal me-2" type="submit">Search</button>
-                    <a class="btn btn-teal" href="{{ URL('/login') }}" role="button">Login</a>
                 </form>
+                    @auth
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          {{auth()->user()->namaFaskes}}
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="/admin/informasi-ketersediaan"><i class="bi bi-layout-text-window-reverse"></i>Dashboard</a></li>
+                          {{-- <li><hr class="dropdown-divider"></li> --}}
+                          <li>
+                            <form action="/logout" method="post">
+                                @csrf
+                                  <button type="submit" name="logout" role="button" class="dropdown-item btn btn-primary"><i class="bi bi-box-arrow-right"></i>Logout</button>
+                              </form>
+                          </li>
+                        </ul>
+                      </li>
+                    @else
+                      <a class="btn btn-teal" href="{{ URL('/login') }}" role="button">Login</a>
+                    @endauth
+
             </div>
         </div>
     </nav>

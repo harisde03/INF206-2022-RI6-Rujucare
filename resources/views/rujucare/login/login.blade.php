@@ -6,25 +6,51 @@
 
 @section('content')
 <section class="vh-90">
+    {{-- @dd(request()) --}}
         <div class="d-flex align-items-center h-100">
             <div class="container-xl">
+
                 <div class="row">
                     <div class="col d-flex align-items-center justify-content-center">
                         <h1>Komunitas Fasilitas Kesehatan Terbesar Se-Indonesia</h1>
                     </div>
                     <div class="col border">
-                        <form action="">
+                        <form action="/login" method="post">
+                            @csrf
                             <div class="m-5">
-                                <div class="">
-                                    <h4>Login Fasilitas Kesehatan</h4>
+                                <div class="mb-2">
+                                    @if(session()->has('LoginError'))
+                                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                        {{session('LoginError')}}
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+                                    @endif
+
+                                    @if(session()->has('success'))
+                                        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                                            {{session('success')}}
+                                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                        </div>
+                                    @endif
+                                    <h4 class="">Login Fasilitas Kesehatan</h4>
                                 </div>
-                                <div class="mt-3">
-                                    <input type="text" class="form-control" placeholder="Email Fasilitas Kesehatan">
+                                <div class="mt-4">
+                                    <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" placeholder="Email Fasilitas Kesehatan" autofocus required value={{old('email')}}>
+                                    @error('email')
+                                        <div class="invalid-feedback">
+                                        {{$message}}
+                                        </div>
+                                    @enderror
                                 </div>
-                                <div class="mt-3">
-                                    <input type="text" class="form-control" placeholder="Password">
+                                <div class="mt-4">
+                                    <input type="password" name="password" class="form-control" placeholder="Password" required >
+                                    @error('password')
+                                        <div class="invalid-feedback">
+                                        {{$message}}
+                                        </div>
+                                    @enderror
                                 </div>
-                                <div class="mt-3">
+                                <div class="mb-3">
                                     <button type="button" class="btn btn-teal">Login</button>
                                 </div>
                                 <div class="mt-3">
