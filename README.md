@@ -9,15 +9,20 @@ Rujucare adalah aplikasi berbasis website yang dapat membantu fasilitas kesehata
 - Haris Daffa (2008107010059)  
 👨‍💻 Maintainer and Fullstack Engineer
 - Nadia Rimawati (2008107010005)  
-👩‍💻 Fullstack Engineer
+👩‍💻 Frontend Engineer
 - Ahmad Chairiansyah (2008107010041)  
 👨‍💻 Fullstack Engineer
 - Muny Safitri (2008107010064)  
 👩‍💻 Database Manager
 - Maghfirah ZA (2008107010075)  
-👩‍💻 Fullstack Engineer
+👩‍💻 Frontend Engineer
 
-<!-- ## Documentation -->
+## Documentation
+|Halaman Depan|Halaman Faskes|
+:-------------------------------------------------------------:|:---------------------------------------------------------------:
+|<p><img src="https://raw.githubusercontent.com/harisde03/INF206-2022-RI6-Rujucare/main/documentation/depan.png" alt="Halaman Depan"></p>|<p><img src="https://raw.githubusercontent.com/harisde03/INF206-2022-RI6-Rujucare/main/documentation/faskes.png" alt="Halaman Faskes"></p>|
+|Halaman Admin|Halaman Pesan |
+|<p><img src="https://raw.githubusercontent.com/harisde03/INF206-2022-RI6-Rujucare/main/documentation/admin.png" alt="Halaman Admin"></p>|<p><img src="https://raw.githubusercontent.com/harisde03/INF206-2022-RI6-Rujucare/main/documentation/pesan.png" alt="Halaman Pesan"></p>  |
 
 ## Requirements
 1. XAMPP with PHP Version ^8.0.2
@@ -26,48 +31,58 @@ Rujucare adalah aplikasi berbasis website yang dapat membantu fasilitas kesehata
 ## How To Run
 ### First Run
 1. Clone this repository
-```
-$ git clone https://github.com/harisde03/INF206-2022-RI6-Rujucare.git
+```bash
+git clone https://github.com/harisde03/INF206-2022-RI6-Rujucare.git
 ```
 
 2. Change current directory to the cloned directory
-```
-$ cd INF206-2022-RI6-Rujucare
+```bash
+cd INF206-2022-RI6-Rujucare
 ```
 
 3. Install all dependencies with composer
-```
-$ composer install
+```bash
+composer install
 ```
 
 4. Copy .env.example to .env in the same directory
-```
-$ copy .env.example .env
+```bash
+cp .env.example .env
 ```
 
 5. Generate key using artisan
-```
-$ php artisan key:generate
+```bash
+php artisan key:generate
 ```
 
-6. Run the server using artisan
+6. Create the symbolic links configured for the application
+```bash
+php artisan storage:link
 ```
-$ php artisan serve
+
+7. Create a database named `rujucare` through phpMyAdmin
+
+8. Import sqldump from the file `rujucare.sql` through phpMyAdmin
+
+9. Run the server using artisan
+```bash
+php artisan serve
 ```
 
 ### After First Run
 1. Start a terminal / command prompt in the cloned directory
-```
-$ cd INF206-2022-RI6-Rujucare
+```bash
+cd INF206-2022-RI6-Rujucare
 ```
 
 2. Run the server using artisan
-```
-$ php artisan serve
+```bash
+php artisan serve
 ```
 
 ## Resources
 ### Fonts:
+https://github.com/twbs/icons  
 https://github.com/FortAwesome/Font-Awesome  
 https://fonts.google.com/specimen/Montserrat  
 https://fonts.google.com/specimen/Comfortaa  
