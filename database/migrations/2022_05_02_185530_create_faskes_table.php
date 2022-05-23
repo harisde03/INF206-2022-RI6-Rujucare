@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
 
             $table->string('namaFaskes');
-            // $table->string('urlFaskes');
-            $table->string('email');
+            $table->string('urlFaskes');
+            $table->string('email')->unique();
             $table->String('tingkatFaskes');
             $table->string('password');
             $table->string('suratPernyataan')->nullable();

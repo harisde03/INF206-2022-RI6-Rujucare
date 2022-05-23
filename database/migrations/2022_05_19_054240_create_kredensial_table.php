@@ -13,15 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('kredensials', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('faskes_id');
-            $table->string('namaPublik');
+        Schema::create('kredensial', function (Blueprint $table) {
+            $table->id('id_kredensial');
+
+            $table->string('namaPublik')->unique();
             $table->string('emailPublik');
+            $table->string('tingkatPublik');
             $table->string('teleponPublik')->nullable();
-            $table->text('deskripsiPublik');
-            $table->text('alamatPublik');
+            $table->string('deskripsiPublik')->nullable();
+            $table->string('alamatPublik')->nullable();
             $table->string('faskesPicture')->nullable();
+            $table->string('urlFaskes');
             $table->timestamps();
         });
     }
@@ -33,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kredensials');
+        Schema::dropIfExists('kredensial');
     }
 };
